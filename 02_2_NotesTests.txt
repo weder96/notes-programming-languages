@@ -1,0 +1,44 @@
+BDD (Behavior-Driven Development - Desenvolvimento Orientado por Comportamento) em seu processo de teste usando a ferramenta Cucumber. 
+Conhece BDD? Ou já ouviu falar de Cocumber
+Mas o que é Cucumber? E por que essa estratégia é a adequada e sugerida para projetos Ágeis, junto com o BDD?
+
+5. Você conhece TDD?
+Criado pelo engenheiro de software Kent Beck, o Test Driven Development (TDD) aborda o desenvolvimento orientado a teste. 
+O TDD é um conceito promovido pelo Extreme Programming.
+
+
+Frameworks
+Java - JUnit
+6. Já ouviu falar em BDD?
+Criado como uma resposta ao TDD, o Behavior Driven Development (BDD), promove a colaboração entre desenvolvedores, profissionais relacionados ao negócio e o setor de qualidade de software. Criando testes voltados aos cenários do negócio, estreitando a comunicação entre as equipes.
+
+Frameworks
+
+Java - Cucumber JVM e JBehave
+Quais são os tipos de testes que você conhece?
+Há alguns tipos de testes. Podemos citar Testes Unitários, Testes de Integração, Testes de Sistema, Teste End-To-End e Testes de Carga/Performance.
+
+Testes Unitários você deve garantir a qualidade de um componente/classe/método. Não deve depender de nada além do código da classe. Tenha atenção as condições de contorno, por exemplo, a classe que gerencia a adição de produtos em um carrinho deve permitir produtos com preço negativo? E se a compra estourar o valor máximo aceito para inteiros? Etc…
+
+Testes de Integração pode ser feitas entre classes de um sistema. Faça um chamado ao seu ProdutosDAO e veja qual o retorno. Se você usa Java com Hibernate uma dica é configurar o HSQLDB para chamar a base de dados, assim você pode fazer um teste de integração do sistema inteiro. Para entender melhor a diferença entre Teste de Integração e Teste Unitários.
+
+Testes de Sistema pode ser feito entre sistemas. Seu sistema integra com outros? Hoje em dia é bem comum sistemas serem quebrados em micro-serviços, e como testar a integração deles? Usar o Swagger para documentar e testar as APIs é uma dica. DockerComposer para criação de vários nós de um sistema distribuído também. Aqui conte sua experiência, não adianta inventar. Caso nunca tenha feito, pesquise como os outros fazer em dê uma resposta sincera. Veja Consumer Driver 
+Contract Testing.
+
+Teste End-to-End é engloba o Testes de Sistemas, são scripts javascript usados para fingir ser um usuário web. De inicio havia o Selenium, agora existe o Protractor, ambos são conhecidos como testes de interface. Difícil de se implementar e difícil manutenção. Caro queira optar por um deses, repense os testes anteriores.
+
+Testes de Carga/Performance são feitos para validar o quanto seu sistema aguenta. Nunca o fez? Então você sabe me dizer quantas conexões simultâneas seu sistema aguenta? Não? Então veja o que o JMeter pode fazer. O Gatling parece muito bom, mas tem menos documentação disponível porque é mais novo.
+
+
+Questions:
+O que o TDD é na realidade um processo, ele indica o fluxo que deve ser tomado no desenvolvimento. Ele visa desde o princípio cubrir a maior quantidade possível de código com testes, dessa maneira reduzindo a quantidade de bugs em seu desenvolvimento e inclusive bugs em seu teste. O processo do TDD possuí o seguinte fluxo:
+
+Começa escrevendo o teste
+Execute o teste e quaisquer outros testes.Seu teste recém-adicionado deve falhar. Se não falhar aqui, pode não estar testando a coisa certa e, portanto, possui um bug
+Escreva a quantidade mínima de código necessária para fazer o teste passar
+Execute os testes para verificar as novas passagens de teste
+Refatorar opcionalmente seu código
+Repita a partir de 1
+
+O que vc entende que os teste podem evoluir vc como programador?
+

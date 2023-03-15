@@ -1,0 +1,1135 @@
+
+1. Explique os princípios da orientação a objeto?
+É um paradigma de programação baseado em interações entre unidades de software (objetos), tentando aproximar-se do mundo real. Abstração, encapsulamento, herança e polimorfismo são os princípios da orientação a objeto.
+
+2. Você conhece a arquitetura em três camadas?
+O modelo de orientação a objeto promoveu a abstração, mudando os conceitos da linguagem estruturada. Com esta mudança de conceito, surgiu a arquitetura em três camadas, onde há a separação entre a camada de apresentação, camada de negócios e camada de dados.
+
+3. Você sabe o que são Design Patterns?
+Motivado pela solução de problemas recorrentes, os padrões são aplicados para alcançar um objetivo na engenharia de software. Estes objetivos muitas vezes resultam em uma solução madura.
+
+Segundo o livro GoF - Gang of Four, existem 23 padrões. Alguns padrões são bem familiares e encontrados em alguns frameworks que nós utilizamos.
+
+Padrões de criação (5)
+Abstract Factory
+Builder
+Factory Method
+Prototype
+Singleton
+
+Padrões estruturais (7)
+Adapter
+Bridge
+Composite
+Decorator
+Façade (ou Facade)
+Flyweight
+Proxy
+
+Padrões comportamentais (11)
+chain
+command
+interpreter
+iterator
+mediator
+memento
+observer
+state
+strategy
+templatemethod
+visitor
+
+
+Architectural Standards(5)
+dao
+flux
+lazyloading
+modelviewcontroller
+modelviewpresenter
+
+
+Others Design Patterns(33)
+EventQueue
+acyclicvisitor
+ambassador
+balking
+bytecode
+callback
+circuitbreaker
+collectionpipeline
+combinator
+databus
+datamapper
+datatransfer
+delegate
+dependencyinjection
+doubledispatch
+eventaggregator
+executearound
+locality
+monostate
+multiton
+mutex
+nullobject
+objectpool
+pipeline
+privateclassdata
+property
+resourceAcquisitionIsInitialization
+servant
+servicelayer
+specification
+threadpool
+tolerantreader
+twin
+
+
+
+7. Você conhece SCRUM ?
+Foi concebido como um estilo de gerenciamento de projeto em montadoras de automóveis. O SCRUM é um framework que promove uma interação entre a equipe, visando a gestão de projetos e o desenvolvimento ágil. As entregas são dívidas em cíclos (sprints), onde o KanBam e o Gráfico de Burndown são ferramentas utilizadas.
+
+8. Você conhece ORM?
+O mapeamento de objeto relacional é uma técnica que promove a abstração do banco de dados, onde objetos do banco de dados relacionais (tabelas) são representados por classes e os seus registros por instâncias. A abstração do banco de dados possibilita que a aplicação utilize qualquer banco de dados.
+
+Frameworks
+
+NET - NHibernate e EntityFramework
+Java - Hibernate
+NodeJs - Sequelize e Waterline
+Ruby - Active Record
+9. Você conhece SOA?
+A arquitetura orientada a serviços, envolve a orquestração e disponibilização de serviços por meio de barramento (ESB - Enterprise Service BUS). O apoio desta arquitetura promove a governança que impacta diretamente em pessoas, processos e produtos.
+
+10. O que é orientação a aspecto?
+É um paradigma de programação que tem como princípio a separação de interesses. Possibilita que todo código secundário seja encapsulado e modularizado, ou seja, o crosscutting (ex: log, cache e segurança).
+
+Frameworks
+
+Java - AspectJ
+NET - Post Sharp
+Mono - Cecil
+Conclusão
+Este conteúdo serve apenas como direcionamento aos nossos estudos, claro que dependendo da vaga ou negócio da organização, você pode ser questionado quanto as ferramentas, metodologias e processos.
+
+
+Java7 vs Java8 Example
+Implement Runnable Using Lambda Expression
+Introduction to Functional Interfaces
+Consumer Interface
+BiConsumer Interface
+Predicate Interface
+Function Interface
+Unary and Binary Functional Interface
+Supplier Functional Interface
+Method Reference
+Method Reference and Constructor Reference
+Lambda Local Variable
+Streams Introduction
+Streams Introduction
+Streams Example
+Streams Map Example
+Streams FlatMap Example
+Streams Filter Example
+Streams Reduce Example
+Streams Filter Map Reduce Example
+Streams MinBy, MaxBy Example
+Streams Limit Skip Example
+Streams AllMatch, AnyMatchExample
+Streams FindAny , FindFirst Example
+Streams Factory Method Example
+Numeric Stream Example
+Numeric Stream Factory Method Example
+Numeric Stream Factory Aggregation Method Example
+Stream Boxing and UnBoxing Example
+Numeric Stream Map Example
+Stream Joining Example
+Stream Mapping and Counting Example
+Stream Summing and Averaging Example
+Stream Grouping By Example
+Stream Partitioning By Example
+Sequential vs Parallel Stream Example
+Sequential vs Parallel Stream Use Case
+Parallel Stream When Not to Use Case Part 1
+Optional Class Introduction
+Optional Class Example
+Optional Methods Example
+Optional If Present Method Example
+Optional Methods Exampl2
+Optional FlatMap Filter Example
+Interface Default and Static Method Introduction
+Default Method Sort Example
+Default Method Custom Sort Example
+Interface Method and Static Method Example
+
+
+Generics
+
+Reflexão em Java.
+
+
+SQL:
+Quais Bancos de dados vc já trabalhou.
+
+Consegue definir inner join, left join , right join e full outer join.
+Ja trabalhou com bancos Nosql (igual da tabelas com collections)
+Já trabalhou com algum banco de Graph. (Neo4j)
+
+
+O que são microsserviços?
+
+São uma abordagem de arquitetura na qual o software consiste de pequenos serviços independentes que se comunicam entre si e são organizados de acordo com seus domínios de negócio.
+
+Em arquiteturas monolíticas, os processos são extremamente acoplados e são executados como um único serviço , sendo assim se uma parte do sistema tiver a necessidade de escalar será necessário escalar o sistema todo.
+Microsserviços são autônomos, cada serviço pode ser desenvolvido, implantado e escalado sem interferir em outros serviços.
+
+Microsserviços são especialistas, cada serviço é desenhado para resolver um problema específico, se for necessário adicionar código de outras responsabilidades é recomendável separar em outro serviço.
+
+Microsserviços são resilientes, a independência do serviço aumenta a resiliência a falhas na arquitetura, se um deles tiver problema , só afetará a parte do fluxo pela qual ele é responsável.
+
+Microsserviços facilitam a reutilização de código, a divisão em módulos com responsabilidades bem definidas possibilita que funções específicas de um serviço possam ser utilizadas para complementar features sem outros sem a necessidade de escrever um código novo.
+
+Microsserviços permitem ter liberdade na escolha da stack, pois n microsserviços de n linguagens diferentes podem se comunicar via endpoints sem problemas.
+
+Spring Cloud
+Fornece uma série de ferramentas que facilitam a criação de aplicações distribuídas e escaláveis.
+
+Dentre as funcionalidades podemos citar:
+
+Service Discovery
+Que permite que outros serviços "descubram" facilmente a rota dos serviços que precisam acessar
+
+Mais conhecidos do Spring Cloud:
+Spring Cloud Netflix Eureka
+Spring Cloud Consul
+
+Gateway
+Tem o papel de ser um intermediário nas requisições para outros serviços.
+
+Mais conhecidos do Spring Cloud:
+Spring Cloud Gateway
+Zuul
+Config server
+
+Permite armazenar configurações de aplicações de modo centralizado fora da aplicação (por ex, em um repositório que centralize todas as configurações de todos os microsserviços.
+
+Config Server
+
+Load Balancer
+É responsável por distribuir de forma eficiente o tráfego de requisições dentre as instâncias de um mesmo serviço.
+
+Mais conhecidos no Spring
+
+Ribbon
+Spring Cloud Load Balancer
+
+Feign
+Facilita a criação e utilização de Clients HTTP.
+
+Feign
+
+Circuit Breaker
+Facilita o acompanhamento e controle de falhas e altas taxas de latências entre os serviços.
+
+Mais conhecidos no Spring:
+Hystrix
+Resilience4J
+
+Observable lifecycle:
+Followings are the 4 stages of the observable lifecycle:
+
+Creation
+Subscription
+Execution
+Destruction
+ 
+Observables Creation
+
+For creating an Observable, first import Observable from RxJS.
+
+        import { Observable } from "rxjs";
+        var observable = Observable.create((observer:any) => {
+            observer.next('Hello World!')
+        })
+    
+
+
+Padrão de Arquitetura Hexagonal
+Há uma frase que ouvi uma vez relacionada à vida, mas que também se aplica ao desenvolvimento de software :
+
+"Uma pessoa imatura pensa que todas as suas escolhas geram ganhos... uma pessoa madura sabe que todas as escolhas têm perdas". (Augusto Cury)
+Em geral, quanto mais ferramentas você conhece e quanto mais informações você tem sobre suas vantagens e custos, você tende a fazer uma melhor escolha de qual ferramenta usar como solução de acordo com o desafio apresentado.bem, vamos entender o padrão da Arquitetura Hexagonal.
+
+Crie sua aplicação para trabalhar sem uma UI ou banco de dados, ao qual você pode executar testes automáticos de regressão, implementar quando o banco de dados não estiver disponível e conectar aplicações sem envolvê-las. (Alistair Cockburn)
+Assim começa o post, extraído da documentação do site de Alistair Cockburn, criador do padrão da Arquitetura Hexagonal ou mesmo conhecido como o padrão de portas e adaptadores.
+
+Uma das razões para criar este padrão foi principalmente delegar a infra-estrutura e UI parte do projeto, concentrar-se na regra de negócios e torná-la funcional, além de não misturá-la, ou seja, uma regra de negócios no banco de dados ou mesmo na parte UI de um projeto.
+
+A arquitetura hexagonal é compartilhada em 3 partes:
+
+Centro do Hexágono
+Lado esquerdo do hexágono
+Lado direito do hexágono
+Neste cenário, temos os atores que irão interagir com o centro do hexágono:
+
+O ator principal, que conduzirá uma ação;
+O ator secundário a ser liderado.
+Uma pergunta comum é a diferença entre os atores: quem são os principais atores na minha aplicação? Quem são os atores secundários?
+
+Para responder a esta pergunta, é necessário fazer outra pergunta:
+
+"Quem inicia a conversa?
+"Isto é, quem é responsável por iniciar o fluxo, o ator que realiza uma ação?
+Ao responder esta pergunta, você terá os atores principais, não importa se é uma pessoa, outro sistema, um script em bash que chama seu adapter, se dispara um gatilho que chama o core business de sua aplicação, então ele é o ator principal.
+
+Então, o ator secundário será levado a realizar uma determinada ação que o ator primário tenha desencadeado. Pode ser gravar dados, registrá-los, ou mesmo chamar uma terceira aplicação e obter uma resposta, retornando ao ator primário.
+
+O centro do hexágono
+É onde estão localizados os modelos, domínios e regras de negócios de seu software . É um ambiente que deve ser totalmente isolado em termos de não ser afetado por ocorrências externas, por exemplo, o banco de dados que será utilizado, framework frontend.
+
+Lado esquerdo do hexágono
+É o lado do ator principal, o lado do usuário, que conduz uma ação, pois este é o lado do usuário que realiza alguma tarefa.
+
+Lado direito do hexágono
+É o lado do ator secundário, lado dos dados, que é conduzido, seja para escrever dados, ler dados, modificar dados, e apagar dados.
+
+Portas
+As portas são a comunicação gateway entre o centro de seu hexágono com os lados esquerdo e direito do seu hexágono, com os lados externos.
+
+Adapters
+Os adaptadores são os usuários das portas. Para cada porta que seu hexágono possui, um adaptador deve ser criado, portanto, você tem a liberdade de modificá-lo e apagá-lo dinamicamente. Em portas e adaptadores, temos também o conceito de portas primárias e secundárias, e o conceito é o mesmo utilizado com os atores.
+
+Nos atores primários de nossa aplicação temos os condutores da ação, que utilizarão os adaptadores primários, e isto "baterá" nas portas primárias. Assim, as portas secundárias e os adaptadores conduzirão a ação até o ator secundário no fluxo contínuo da aplicação.
+
+Inversão de Controle (IoC)
+Em um fluxo real, usando como exemplo o simples registro de dados, teríamos o seguinte:
+
+O lado esquerdo (o condutor) entrega as informações, usando um adaptador e através da porta principal, ao centro do hexágono (domínio).
+O centro do hexágono, então, recebe dados através da porta, depois os processa usando uma porta secundária e chama o lado direito.
+O lado direito (o conduzido) chama um banco de dados para registrá-los.
+No final, teríamos isto como o fluxo do Hexágono:
+
+Lado esquerdo -> Centro -> Lado direito
+Mas este cenário impacta os conceitos da Arquitetura Hexagonal, que é que o domínio deve ser isolado e responsável apenas pela regra de negócio, pois no exemplo acima, teria que ser responsável por chamar a entidade responsável pela gravação.
+
+Agora, surge o conceito de Inversão de Controle (IoC).
+
+Inversão de Controle (IoC) é um padrão que defende o uso de instâncias de uma determinada classe, tratando-a externamente e não dentro da classe em questão, ou seja, delegando o controle de uma classe para outra. Ela pode ser uma interface, componente, serviço, etc.
+
+Em nosso caso, ele inverterá precisamente a ordem de fluxo, assegurando que, ainda usando o exemplo, nosso banco de dados vá para nosso centro e não para o outro lado, deixando nosso domínio realmente isolado.
+
+No final, este seria o nosso fluxo correto:
+
+Lado esquerdo -> Centro <- Ioc - Lado direito
+Pontos positivos
+Como pontos fortes da utilização desta arquitetura, podemos enumerar:
+
+Solução de Serviços Externos Independentes
+Possibilita adiar algumas decisões técnicas
+Criação e substituição de adaptadores
+Fácil de testar a aplicação
+Tecnologias fáceis de trocar
+Pontos negativos
+Também temos alguns aspectos negativos no uso desta arquitetura hexagonal, que são
+
+Complexidade adicional (construção de mais camadas)
+Custo de criação e manutenção
+Não há orientação sobre como organizar o código (diretórios, camadas)
+
+
+
+Spring Boot Annotations is a form of metadata that provides data about a program that is not a part of the program itself. They do not have any direct effect on the operation of the code they annotate. Spring Boot Annotations do not use XML and instead use the convention over configuration principle. 
+
+Given below are some important Spring Boot Annotations.
+
+Table of Contents	
+Spring Boot Annotations Everyone Should Know
+1. @Bean
+2. @Service
+3. @Repository
+4. @Configuration
+5. @Controller
+6. @RequestMapping
+7. @Autowired
+8. @Component
+9. @SpringBootApplication
+10. @EnableAutoConfiguration
+11. @ComponetScan
+12. @Required
+13. @Qualifier
+14. @CookieValue
+15. @Lazy
+
+Conclusion
+Spring Boot Annotations Everyone Should Know
+
+1. @Bean
+The @Bean annotations are used at the method level and indicate that a method produces a bean that is to be managed by Spring container. It is an alternative to the XML<bean> tag. 
+
+Example:
+
+@Bean
+Public BeanExample beanExample (){
+return new BeanExample ()
+}
+
+2. @Service
+It is used at the class level. It shows that the annotated class is a service class, such as business basic logic, and call external APIs.
+Example:
+
+@Service
+public class TestService{
+    public void service1(){
+        // business code
+    }
+}
+
+Read: Spring Boot Projects & Topics
+
+3. @Repository
+It is a Data Access Object (DAO) that accesses the database directly. It indicates that the annotated class is a repository. 
+Example:
+
+@Repository
+public class TestRepository {
+    public void delete(){
+    // persistence code
+    }
+
+}
+
+4. @Configuration
+It is used as a source of bean definitions. It is a class-level annotation.
+Example:
+
+@Configuration
+public class Bus{
+
+@Bean
+Bus engine(){
+    return new Bus();
+}
+}
+
+5. @Controller
+The annotation is used to indicate that the class is a web request handler. It is often used to present web pages. It is most commonly used with @RequestMapping annotation. 
+
+Example:
+
+@Controller
+@RequestMapping(“cars”)
+public class CarsController {
+@RequestMapping(value= “/{name}”, method= RequestMethod.GET)
+
+    public Employee getCarsByName(){
+        return carsTemplate;
+    }
+}
+
+6. @RequestMapping
+RequestMapping is used to map the HTTP request. It is used with the class as well as the method. It has many other optional elements like consumes, name, method, request, path, etc.
+
+Example:
+
+@Controller
+
+public class FlowersController
+
+{
+
+@RequestMapping (“/red-colour/flowers”)
+
+public String getAllFlowers(Model model)
+
+{
+
+//application code
+
+return “flowerlist”;
+
+}
+
+7. @Autowired
+This annotation is used to auto-wire spring bean on setter methods, constructor and instance variable. It injects object dependency implicitly. When we use this annotation, the spring container auto-wires the bean by its matching data type.
+
+Example:
+
+@Component
+
+public class Employee
+
+private Person person;
+
+@Autowired
+
+public Employee(Person person)
+
+{
+
+this.person=person
+
+}
+
+}
+
+Also Read: Spring Developer Salary in India
+
+8. @Component
+It is a class-level annotation that turns the class into Spring bean at the auto-scan time.
+
+Example:
+
+@Component
+
+Public class Teachers
+
+{
+
+……
+
+}
+
+9. @SpringBootApplication
+It consists of @Configuration, @ComponentScan, and @EnabeAutoConfiguration. The class annotated with @SpringBootApplication is kept in the base package. This annotation does the component scan. However, only the sub-packages are scanned. 
+
+10. @EnableAutoConfiguration
+It is placed on the main application class. Based on classpath settings, other beans, and various property settings, this annotation instructs SpringBoot to start adding beans.
+
+11. @ComponetScan
+It is used to scan a package of beans. It is used with the annotation @Configuration to allow Spring to know the packages to be scanned for annotated components. This annotation is also used to specify base packages.
+
+Example:
+
+@ComponentScan(basePackages = “com.xyz”)
+
+@Configuration
+
+Public class ScanComponent
+
+{
+
+//…
+
+}
+
+12. @Required
+This annotation is applied to bean setter methods. It indicates that the required property must be filled at the configuration time in the affected bean, or else it throws an exception: BeanInitializationException.
+
+
+13. @Qualifier
+It is used along with @Autowired annotation. It is used when more control is required over the dependency injection process. Individual constructor arguments or method parameters can be specified by using this annotation. Confusion arises when more than one bean of the same type is created, and only one of them is to be wired with a property, @Qualifier is used to get rid of the confusion.
+
+14. @CookieValue
+It is used at the method parameter level as an argument of the request mapping method. For a given cookie name, the HTTP cookie is bound to a @CookieValue parameter.
+
+15. @Lazy
+It is used in the component class. At startup, all auto-wired dependencies are created and configured. But a @Lazy annotation can be created if a bean is to be initialized lazily. This means that only if it is requested for a bean will be created. It can also be used on @Configuartion classes. It’s an indication that all @Bean methods within that @Configuration should be lazily initialized.
+
+Check out: Spring Bean Life Cycle Explained
+
+Conclusion
+Spring Boot has made it easy for Java developers to create Spring applications with ease. As a Java enthusiast or a professional, you should be aware of the basic Spring boot annotations. We hope that this blog helped you understand them. You can take the first step towards a successful Java career by enrolling for upGrad and IIIT-B’s PG Diploma in Full Stack Development.
+
+
+SOLID stands for:
+
+S - Single-responsiblity Principle
+O - Open-closed Principle
+L - Liskov Substitution Principle
+I - Interface Segregation Principle
+D - Dependency Inversion Principle
+In this article, you will be introduced to each principle individually to understand how SOLID can help make you a better developer.
+
+Single-Responsibility Principle
+Single-responsibility Principle (SRP) states:
+
+A class should have one and only one reason to change, meaning that a class should have only one job.
+
+For example, consider an application that takes a collection of shapes—circles, and squares—and calculates the sum of the area of all the shapes in the collection.
+
+First, create the shape classes and have the constructors set up the required parameters.
+
+For squares, you will need to know the length of a side:
+
+class Square
+{
+    public $length;
+
+    public function construct($length)
+    {
+        $this->length = $length;
+    }
+}
+ 
+For circles, you will need to know the radius:
+
+class Circle
+{
+    public $radius;
+
+    public function construct($radius)
+    {
+        $this->radius = $radius;
+    }
+}
+ 
+Next, create the AreaCalculator class and then write up the logic to sum up the areas of all provided shapes. The area of a square is calculated by length squared. The area of a circle is calculated by pi times radius squared.
+
+class AreaCalculator
+{
+    protected $shapes;
+
+    public function __construct($shapes = [])
+    {
+        $this->shapes = $shapes;
+    }
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            if (is_a($shape, 'Square')) {
+                $area[] = pow($shape->length, 2);
+            } elseif (is_a($shape, 'Circle')) {
+                $area[] = pi() * pow($shape->radius, 2);
+            }
+        }
+
+        return array_sum($area);
+    }
+
+    public function output()
+    {
+        return implode('', [
+          '',
+              'Sum of the areas of provided shapes: ',
+              $this->sum(),
+          '',
+      ]);
+    }
+}
+ 
+To use the AreaCalculator class, you will need to instantiate the class and pass in an array of shapes and display the output at the bottom of the page.
+
+Here is an example with a collection of three shapes:
+
+a circle with a radius of 2
+a square with a length of 5
+a second square with a length of 6
+$shapes = [
+  new Circle(2),
+  new Square(5),
+  new Square(6),
+];
+
+$areas = new AreaCalculator($shapes);
+
+echo $areas->output();
+ 
+The problem with the output method is that the AreaCalculator handles the logic to output the data.
+
+Consider a scenario where the output should be converted to another format like JSON.
+
+All of the logic would be handled by the AreaCalculator class. This would violate the single-responsibility principle. The AreaCalculator class should only be concerned with the sum of the areas of provided shapes. It should not care whether the user wants JSON or HTML.
+
+To address this, you can create a separate SumCalculatorOutputter class and use that new class to handle the logic you need to output the data to the user:
+
+class SumCalculatorOutputter
+{
+    protected $calculator;
+
+    public function __constructor(AreaCalculator $calculator)
+    {
+        $this->calculator = $calculator;
+    }
+
+    public function JSON()
+    {
+        $data = [
+          'sum' => $this->calculator->sum(),
+      ];
+
+        return json_encode($data);
+    }
+
+    public function HTML()
+    {
+        return implode('', [
+          '',
+              'Sum of the areas of provided shapes: ',
+              $this->calculator->sum(),
+          '',
+      ]);
+    }
+}
+ 
+The SumCalculatorOutputter class would work like this:
+
+$shapes = [
+  new Circle(2),
+  new Square(5),
+  new Square(6),
+];
+
+$areas = new AreaCalculator($shapes);
+$output = new SumCalculatorOutputter($areas);
+
+echo $output->JSON();
+echo $output->HTML();
+ 
+Now, the logic you need to output the data to the user is handled by the SumCalculatorOutputter class.
+
+That satisfies the single-responsibility principle.
+
+Open-Closed Principle
+Open-closed Principle (OCP) states:
+
+Objects or entities should be open for extension but closed for modification.
+
+This means that a class should be extendable without modifying the class itself.
+
+Let’s revisit the AreaCalculator class and focus on the sum method:
+
+class AreaCalculator
+{
+    protected $shapes;
+
+    public function __construct($shapes = [])
+    {
+        $this->shapes = $shapes;
+    }
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            if (is_a($shape, 'Square')) {
+                $area[] = pow($shape->length, 2);
+            } elseif (is_a($shape, 'Circle')) {
+                $area[] = pi() * pow($shape->radius, 2);
+            }
+        }
+
+        return array_sum($area);
+    }
+}
+ 
+Consider a scenario where the user would like the sum of additional shapes like triangles, pentagons, hexagons, etc. You would have to constantly edit this file and add more if/else blocks. That would violate the open-closed principle.
+
+A way you can make this sum method better is to remove the logic to calculate the area of each shape out of the AreaCalculator class method and attach it to each shape’s class.
+
+Here is the area method defined in Square:
+
+class Square
+{
+    public $length;
+
+    public function __construct($length)
+    {
+        $this->length = $length;
+    }
+
+    public function area()
+    {
+        return pow($this->length, 2);
+    }
+}
+ 
+And here is the area method defined in Circle:
+
+class Circle
+{
+    public $radius;
+
+    public function construct($radius)
+    {
+        $this->radius = $radius;
+    }
+
+    public function area()
+    {
+        return pi() * pow($shape->radius, 2);
+    }
+}
+ 
+The sum method for AreaCalculator can then be rewritten as:
+
+class AreaCalculator
+{
+    // ...
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            $area[] = $shape->area();
+        }
+
+        return array_sum($area);
+    }
+}
+ 
+Now, you can create another shape class and pass it in when calculating the sum without breaking the code.
+
+However, another problem arises. How do you know that the object passed into the AreaCalculator is actually a shape or if the shape has a method named area?
+
+Coding to an interface is an integral part of SOLID.
+
+Create a ShapeInterface that supports area:
+
+interface ShapeInterface
+{
+    public function area();
+}
+ 
+Modify your shape classes to implement the ShapeInterface.
+
+Here is the update to Square:
+
+class Square implements ShapeInterface
+{
+    // ...
+}
+ 
+And here is the update to Circle:
+
+class Circle implements ShapeInterface
+{
+    // ...
+}
+ 
+In the sum method for AreaCalculator, you can check if the shapes provided are actually instances of the ShapeInterface; otherwise, throw an exception:
+
+class AreaCalculator
+{
+    // ...
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            if (is_a($shape, 'ShapeInterface')) {
+                $area[] = $shape->area();
+                continue;
+            }
+
+            throw new AreaCalculatorInvalidShapeException();
+        }
+
+        return array_sum($area);
+    }
+}
+ 
+That satisfies the open-closed principle.
+
+Liskov Substitution Principle
+Liskov Substitution Principle states:
+
+Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
+This means that every subclass or derived class should be substitutable for their base or parent class.
+Building off the example AreaCalculator class, consider a new VolumeCalculator class that extends the AreaCalculator class:
+
+class VolumeCalculator extends AreaCalculator
+{
+    public function construct($shapes = [])
+    {
+        parent::construct($shapes);
+    }
+
+    public function sum()
+    {
+        // logic to calculate the volumes and then return an array of output
+        return [$summedData];
+    }
+}
+ 
+Recall that the SumCalculatorOutputter class resembles this:
+
+class SumCalculatorOutputter {
+    protected $calculator;
+
+    public function __constructor(AreaCalculator $calculator) {
+        $this->calculator = $calculator;
+    }
+
+    public function JSON() {
+        $data = array(
+            'sum' => $this->calculator->sum();
+        );
+
+        return json_encode($data);
+    }
+
+    public function HTML() {
+        return implode('', array(
+            '',
+                'Sum of the areas of provided shapes: ',
+                $this->calculator->sum(),
+            ''
+        ));
+    }
+}
+ 
+If you tried to run an example like this:
+
+$areas = new AreaCalculator($shapes);
+$volumes = new VolumeCalculator($solidShapes);
+
+$output = new SumCalculatorOutputter($areas);
+$output2 = new SumCalculatorOutputter($volumes);
+ 
+When you call the HTML method on the $output2 object, you will get an E_NOTICE error informing you of an array to string conversion.
+
+To fix this, instead of returning an array from the VolumeCalculator class sum method, return $summedData:
+
+class VolumeCalculator extends AreaCalculator
+{
+    public function construct($shapes = [])
+    {
+        parent::construct($shapes);
+    }
+
+    public function sum()
+    {
+        // logic to calculate the volumes and then return a value of output
+        return $summedData;
+    }
+}
+ 
+The $summedData can be a float, double or integer.
+
+That satisfies the Liskov substitution principle.
+
+Interface Segregation Principle
+Interface segregation principle states:
+
+A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
+
+Still building from the previous ShapeInterface example, you will need to support the new three-dimensional shapes of Cuboid and Spheroid, and these shapes will need to also calculate volume.
+
+Let’s consider what would happen if you were to modify the ShapeInterface to add another contract:
+
+interface ShapeInterface
+{
+    public function area();
+
+    public function volume();
+}
+ 
+Now, any shape you create must implement the volume method, but you know that squares are flat shapes and that they do not have volumes, so this interface would force the Square class to implement a method that it has no use of.
+
+This would violate the interface segregation principle. Instead, you could create another interface called ThreeDimensionalShapeInterface that has the volume contract and three-dimensional shapes can implement this interface:
+
+interface ShapeInterface
+{
+    public function area();
+}
+
+interface ThreeDimensionalShapeInterface
+{
+    public function volume();
+}
+
+class Cuboid implements ShapeInterface, ThreeDimensionalShapeInterface
+{
+    public function area()
+    {
+        // calculate the surface area of the cuboid
+    }
+
+    public function volume()
+    {
+        // calculate the volume of the cuboid
+    }
+}
+ 
+This is a much better approach, but a pitfall to watch out for is when type-hinting these interfaces. Instead of using a ShapeInterface or a ThreeDimensionalShapeInterface, you can create another interface, maybe ManageShapeInterface, and implement it on both the flat and three-dimensional shapes.
+
+This way, you can have a single API for managing the shapes:
+
+interface ManageShapeInterface
+{
+    public function calculate();
+}
+
+class Square implements ShapeInterface, ManageShapeInterface
+{
+    public function area()
+    {
+        // calculate the area of the square
+    }
+
+    public function calculate()
+    {
+        return $this->area();
+    }
+}
+
+class Cuboid implements ShapeInterface, ThreeDimensionalShapeInterface, ManageShapeInterface
+{
+    public function area()
+    {
+        // calculate the surface area of the cuboid
+    }
+
+    public function volume()
+    {
+        // calculate the volume of the cuboid
+    }
+
+    public function calculate()
+    {
+        return $this->area();
+    }
+}
+ 
+Now in AreaCalculator class, you can replace the call to the area method with calculate and also check if the object is an instance of the ManageShapeInterface and not the ShapeInterface.
+
+That satisfies the interface segregation principle.
+
+Dependency Inversion Principle
+Dependency inversion principle states:
+
+Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
+
+This principle allows for decoupling.
+
+Here is an example of a PasswordReminder that connects to a MySQL database:
+
+class MySQLConnection
+{
+    public function connect()
+    {
+        // handle the database connection
+        return 'Database connection';
+    }
+}
+
+class PasswordReminder
+{
+    private $dbConnection;
+
+    public function __construct(MySQLConnection $dbConnection)
+    {
+        $this->dbConnection = $dbConnection;
+    }
+}
+ 
+First, the MySQLConnection is the low-level module while the PasswordReminder is high level, but according to the definition of D in SOLID, which states to Depend on abstraction, not on concretions. This snippet above violates this principle as the PasswordReminder class is being forced to depend on the MySQLConnection class.
+
+Later, if you were to change the database engine, you would also have to edit the PasswordReminder class, and this would violate the open-close principle.
+
+The PasswordReminder class should not care what database your application uses. To address these issues, you can code to an interface since high-level and low-level modules should depend on abstraction:
+
+interface DBConnectionInterface
+{
+    public function connect();
+}
+ 
+The interface has a connect method and the MySQLConnection class implements this interface. Also, instead of directly type-hinting MySQLConnection class in the constructor of the PasswordReminder, you instead type-hint the DBConnectionInterface and no matter the type of database your application uses, the PasswordReminder class can connect to the database without any problems and open-close principle is not violated.
+
+class MySQLConnection implements DBConnectionInterface
+{
+    public function connect()
+    {
+        // handle the database connection
+        return 'Database connection';
+    }
+}
+
+class PasswordReminder
+{
+    private $dbConnection;
+
+    public function __construct(DBConnectionInterface $dbConnection)
+    {
+        $this->dbConnection = $dbConnection;
+    }
+}
+ 
+This code establishes that both the high-level and low-level modules depend on abstraction.
+
+Conclusion
+In this article, you were presented with the five principles of SOLID Code. Projects that adhere to SOLID principles can be shared with collaborators, extended, modified, tested, and refactored with fewer complications.
+
+Continue your learning by reading about other practices for Agile and Adaptive software development.
+ 
+
+Clean Code: 
+
+
+The DRY Principle: Don't Repeat Yourself
+KISS: Keep It Simple, Stupid
+
+
+
+O que é SOLID?
+SOLID é um acrônimo criado por Michael Feathers, após observar que cinco princípios da orientação a objetos e design de código — Criados por Robert C. Martin (a.k.a. Uncle Bob) e abordados no artigo The Principles of OOD — poderiam se encaixar nesta palavra.
+S.O.L.I.D: Os 5 princípios da POO
+S — Single Responsiblity Principle (Princípio da responsabilidade única)
+Esse princípio declara que uma classe deve ser especializada em um único assunto e possuir apenas uma responsabilidade dentro do software, ou seja, a classe deve ter uma única tarefa ou ação para executar.
+
+O — Open-Closed Principle (Princípio Aberto-Fechado)
+Princípio Aberto-Fechado — Objetos ou entidades devem estar abertos para extensão, mas fechados para modificação, ou seja, quando novos comportamentos e recursos precisam ser adicionados no software, devemos estender e não alterar o código fonte original.
+Separe o comportamento extensível por trás de uma interface e inverta as dependências.
+
+L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+Princípio da substituição de Liskov — Uma classe derivada deve ser substituível por sua classe base.
+se S é um subtipo de T, então os objetos do tipo T, em um programa, podem ser substituídos pelos objetos de tipo S sem que seja necessário alterar as propriedades deste programa.
+
+I — Interface Segregation Principle (Princípio da Segregação da Interface)
+Princípio da Segregação da Interface — Uma classe não deve ser forçada a implementar interfaces e métodos que não irão utilizar. Esse princípio basicamente diz que é melhor criar interfaces mais específicas ao invés de termos uma única interface genérica.
+
+D — Dependency Inversion Principle (Princípio da inversão da dependência)
+1. Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender da abstração.
+2. Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações.
+
+
+“Programe para uma interface e não para uma implementação.”
+
+interface DBConnectionInterface
+{
+    public function connect();
+}
+
+
+class MySQLConnection implements DBConnectionInterface
+{
+    public function connect()
+    {
+        // ...
+    }
+}
+
+class OracleConnection implements DBConnectionInterface
+{
+    public function connect()
+    {
+        // ...
+    }
+}
+
+class PasswordReminder
+{
+    private DBConnectionInterface dbConnection;
+
+    public function __construct(DBConnectionInterface dbConnection) {
+        this.dbConnection = dbConnection;
+    }
+  
+    // Faz alguma coisa
+}
+
+
+HTTP METHODS:
+GET
+POST
+PUT
+HEAD
+DELETE
+PATCH
+OPTIONS
+
+
+
+Testando serviços Web API
+POSTMAN
+Insomnia REST Client
+Rest Client
+
+

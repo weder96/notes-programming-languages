@@ -1,0 +1,1310 @@
+
+Spring boot 2 
+
+https://ichi.pro/pt/as-40-principais-perguntas-das-entrevistas-do-spring-boot-5524953954122
+
+A estrutura Spring torna o desenvolvimento J2EE (Java 2 Platform Enterprise Edition) mais fácil e é usada para criar código testável, de alto desempenho e reutilizável. O Spring é comumente aplicado no setor de tecnologia da informação e financeiro devido à sua modularidade e recursos de injeção de dependência.
+
+A tecnologia financeira é um campo empolgante e em evolução para desenvolvedores que desejam trabalhar em empresas como MIT, Accenture ou Visa, que preferem Spring a Java EE. Essas empresas estão procurando desenvolvedores como você com experiência em Spring Framework para ajudar a digitalizar suas necessidades corporativas.
+
+Mas como saber se está pronto para uma entrevista? E como você se prepara?
+
+Hoje, veremos um guia de estudo das 40 principais perguntas da entrevista do Spring para ter certeza de que você está pronto para vencer sua entrevista do Spring Framework.
+
+Aqui está o que vamos cobrir hoje:
+O que é Spring Framework?
+O que esperar de uma entrevista do Spring Framework
+40 principais perguntas para Spring Framework
+Concluindo e o que aprender a seguir
+
+O Spring Framework é uma estrutura de aplicativo de código aberto e um contêiner de Inversão de Controle escrito em Java. Ele é projetado para simplificar o design do aplicativo, manipulando automaticamente funcionalidades de baixo nível. Isso permite que os desenvolvedores se concentrem na lógica de negócios. O Spring também é muito adaptável com muitos módulos de extensão que aumentam os recursos do framework.
+
+Embora o Spring não imponha um modelo de programação específico, ele ganhou grande popularidade na comunidade Java como uma adição ao modelo Enterprise JavaBeans (EJB) . Em parte, isso se deve à seleção exclusiva de funcionalidades do Spring, como inversão de controle e programação orientada a aspectos (AOP), excelentes para trabalhar com beans.
+
+A estrutura é especialmente adequada para aplicativos corporativos e financeiros devido à sua velocidade, segurança e sistemas de transação fáceis de construir. A estrutura Spring oferece muitas vantagens sobre Java EE ou outras estruturas baseadas em Java, como:
+
+O Spring permite que você desenvolva aplicativos de nível corporativo com POJOs , então você não precisa de outro produto de contêiner EJB.
+O Spring oferece uma interface de gerenciamento de transações escalonável e consistente para transações locais e globais.
+A primavera é organizada de forma modular. Sua estrutura da web é uma estrutura MVC da web leve.
+O Spring faz usos inovadores de tecnologias pré-existentes, como estruturas ORM, JEE e timers JDK.
+É fácil testar um aplicativo no Spring.
+Spring fornece uma API excelente, portanto, é fácil trabalhar com exceções específicas de tecnologia.
+A maioria das empresas que buscam experiência no Spring Framework são financeiras, como bancos e firmas de investimento. Alguns dos principais empregadores dos candidatos à primavera são Citibank, eBay, Visa e JP Morgan.
+
+Essas empresas estão interessadas em usar o Spring para proteger e otimizar sua pilha de contabilidade e vendas. A maioria das perguntas da entrevista irá, portanto, testar seu conhecimento sobre esses recursos, como injeção de dependência, programação orientada a aspectos e MVC .
+
+Haverá também questões gerais para garantir que você tenha um entendimento completo de cada parte do Spring, como nomear os módulos usados ​​no desenvolvimento de aplicativos da web ou conectividade de banco de dados.
+
+Finalmente, certamente serão feitas perguntas abrangentes sobre por que o Spring é usado e quais benefícios ele oferece. Para ajudá-lo a se preparar, coletamos as 40 principais perguntas da entrevista para atualizar seu conhecimento sobre cada uma dessas categorias.
+
+Vamos começar!
+
+40 principais perguntas para Spring Framework:
+
+1. Quais são os benefícios do Spring?
+Leve: 
+o Spring é leve no uso de recursos, com o Spring Framework básico custando apenas 2 MB de armazenamento.
+
+Escalável: 
+a interface de gerenciamento de transações do Spring pode escalar tanto para uma transação local em um único banco de dados até transações globais usando o módulo JTA
+
+Tratamento de exceções: 
+o tratamento de exceções é fácil graças aos abundantes recursos da API para lidar com exceções em cada módulo.
+
+Arquitetura em camadas: 
+permite que você use as partes do programa necessárias e descarte o resto.
+
+POJO habilitado: Plain Old Java Object Programming permite teste e integração contínuos.
+Código aberto: gratuito para todos e sem dependência de fornecedor.
+
+Inversão de controle (IOC): 
+Obtém acoplamento fraco via IOC, permitindo que os objetos forneçam suas dependências a outros objetos, em vez de objetos dependentes.
+
+Orientado a Aspectos (AOP): 
+O Spring oferece suporte à programação orientada a Aspectos, um paradigma que separa a lógica de negócios do aplicativo dos serviços do sistema.
+O arquivo de configuração do Spring é um XML arquivo que contém as informações de classe para um projeto. 
+Eles descrevem a configuração de cada classe, como são apresentados a outras classes e dependências em todo o programa.
+
+3. Quais são os diferentes módulos do Spring Framework?
+São cerca de 20 módulos no total e são divididos nas camadas de Core Container, Data Access / Integration, Web, AOP (Aspect Oriented Programming), Instrumentação e Teste.
+
+Core Container: O núcleo do Spring Framework contém quatro módulos.
+
+Spring Core
+Spring Bean
+SpEL (linguagem de expressão Spring)
+Contexto da Spring
+JDBC (Java DataBase Connectivity)
+ORM (Mapeamento Objeto Relacional)
+OXM (Mapeadores XML de Objeto)
+JMS (Java Messaging Service)
+Transação
+Rede
+Web - MVC
+Web - Soquete
+Web - Portlet
+Instrumentação: esta camada adiciona suporte para instrumentação de classe e implementações de carregador de classe.
+
+Teste: Adiciona suporte para teste usando Junit e TestNG.
+
+Diversos: Existem dois módulos fora dessas categorias de camadas.
+
+Aspects: permite que o Spring se integre ao Aspect.
+Mensagens: 
+adiciona suporte para STOMP, um modelo de programação de anotação, e permite rotear mensagens STOMP de clientes WebSocket.
+Os aplicativos Spring contêm cinco componentes:
+
+Interface: define as funções do programa.
+
+Classe Bean: Contém propriedades, métodos setter e getter para acessar o bean e funções específicas, etc.
+
+Spring Aspect-Oriented Programming (AOP): Inclui a funcionalidade de interesses transversais, que não é compatível com a Programação Orientada a Objetos.
+Bean Configuration File: Contém as informações das classes, como configurá-las e define seus relacionamentos.
+
+Programa do usuário: chama funções em todo o programa
+
+A injeção de dependência (DI) é um conceito que define como várias classes devem ser conectadas. Este é um exemplo de Inversão de Controle. Você não precisa conectar serviços e componentes explicitamente no código ao usar injeção de dependência. Em vez disso, você descreve os serviços necessários para cada componente em um XMLarquivo de configuração e permite que o contêiner IOC os conecte automaticamente.
+
+
+6. O que é um contêiner Spring IoC?
+Um contêiner IoC cria, configura e conecta objetos ao mesmo tempo que gerencia seu ciclo de vida. 
+contêiner obtém instruções sobre essas áreas de metadados de configuração fornecidos pelo usuário.
+
+7. Quais são os tipos de IoC?
+BeanFactory Container: esta classe de fábrica contém uma coleção pré-empacotada de beans que instanciam quando chamados por clientes. 
+Este é o container mais básico para suportar DI.
+
+ApplicationContext Container: Built on top of the BeanFactory Container, this container provides additional enterprise-focused functionalities. For example, ApplicationContext containers grant the ability to resolve textual messages and publish application events.
+
+AOP is a programming technique that allows programmers to modularize behavior that is used across the typical divisions of responsibility found in Object-Oriented Programming. The core AOP construct of aspects are behaviors applicable across classes. Extracting these behaviors from individual beans to aspects allows them to be reused easily.
+
+9. What are Spring beans?
+Beans are objects created from configuration metadata when it is passed to the IOC container. They form the foundation of all Spring programs. The IOC container instantiates, configures, connects, and manages each bean.
+
+10. What are the common implementations of the ApplicationContext?
+Three of the most popular containers are:
+
+FileSystemXmlApplicationContext: Causes the constructor to load bean definitions from an XML configuration file. Must be pointed to with a full file path.
+ClassPathXmlApplicationContext: This container does the same as the above but does not require a full file path. Instead, you set the CLASSPATH property and allow the container to find the XML at that CLASSPATH.
+WebXmlApplicationContext: Loads all bean definitions to a web application from an XML file.
+The BeanFactory is a basic, space-efficient container with limited functionality. It is best used for simple tasks or when using low-resource machines.
+
+The ApplicationContext is an advanced, more intensive container with an extended interface and additional capabilities like AOP. This container is best used when you need more functionality than the BeanFactory and have ample resources available on the machine.
+
+12. How do you add a bean in a Spring application?
+We must annotate a method: @Bean annotation. When JavaConfig encounters this method, it will execute that method and register the return value as a bean within a BeanFactory.
+
+package io.educative;
+ 
+  public class User {
+  
+     private String name;
+     private String address;
+  
+     public String getName() {
+        return name;
+     }
+     public void setName(String name) {
+        this.name = name;
+     }
+     public String getAddress() {
+        return address;
+     }
+     public void setAddress(String address) {
+        this.address = address;
+     }
+  }
+Spring supports five scopes for beans:
+
+Singleton: Scopes a bean definition to be restricted to a single instance per Spring IoC container
+Prototype: Scopes a single bean to enable any number of instances.
+Request: Scopes a bean definition to a single HTTP request within an ApplicationContext
+Session: Scopes a bean definition to an HTTP session within an ApplicationContext
+Global-session: Scopes a bean definition to a Global HTTP
+
+There are seven steps to the Bean lifecycle:
+
+Instantiate: The bean is instantiated by the Spring container using the bean’s definition found in the XML configuration file.
+Populate properties: Spring populates all the defined properties from the XML file using dependency injection.
+Set Bean Name: Spring passes the bean’s identifier to the setBeanName() method if the bean uses the BeanNameAware interface.
+Set Bean factory: Spring passes the beanfactory to the setBeanFactory() method if the bean is configured to use the BeanFactoryAware interface.
+Pre Initialization: Spring calls any BeanPostProcessors associated with the bean using the postProcessorBeforeInitialization() method.
+Initialization: The bean is then initialized. Any special initialization process specified in the init-method is followed.
+Post Initialization: All defined postProcessAfterInitialization() methods are called. Now the bean is complete. Beans that implement DisposableBean will be deleted using the destroy() after their job is finished.
+An inner bean is used as a property of another bean. Inner beans can be defined in the configuration XML file under either the <property> or <constructor-arg> elements. All inner beans are always scoped as prototype and don’t have identifiers.
+
+16. What is bean auto wiring?
+This is a Spring capability that allows the Spring container to automatically set dependency relationships between collaborating beans by looking at the BeanFactory. Auto wiring can be set to define these relationships using the beans’ names or type or even class constructors.
+
+17. How can you inject a Java Collection in Spring?
+Java collections can be injected in four different ways:
+
+<list>: Helps you wire sets of values like lists while allowing duplicates.
+<set>: Helps you wire a set of values while avoiding duplicates.
+<map>: Allows you to inject a collection of key-value pairs of any data type.
+<props>: Allows you to inject a collection of key-value pairs with both keys and values of type String.
+Joinpoints represent any point in a program where an action is taken. Examples of a joinpoint include when handling an exception or a method is executed. When using AOP, only method executions are joinpoints.
+
+19. What is an Advice in Spring?
+An Advice is the action taken at a given joinpoint. AOP uses an Advice as an interceptor before the method’s execution is complete.
+
+20. What are the types of advice for a Spring Framework?
+Before: These are advices that execute before the joinpoint methods. They’re marked using the @Before annotation mark.
+After returning: These execute after the joinpoint’s method completes executing without issue. They’re marked using the @AfterReturning annotation mark.
+After throwing: These execute only if the joinpoint method ends by throwing an exception. They’re marked using the @AfterThrowing annotation mark.
+After: These execute after a joinpoint method, regardless of how it completes. They’re marked using the @After annotation mark.
+Around: These execute before and after a joinpoint and are marked using the @Around annotation mark.
+Weaving in Spring is the process of linking elements to other application types or objects to create advised objects. This is done at runtime.
+
+22. Describe Spring DAO support
+Data Access Object (DAO) support is a set of tools that make it easier to work with data access technologies like Hibernate and JDO with improved consistency. It also catches technology-specific errors automatically. Together these make DAOs easier to work with and allows you to switch between persistence technologies without error.
+
+23. What is the JDBC? Which classes are present in the Spring JDBC API?
+JDBC stands for Java Database Connectivity. It is an application programming interface in Java used to define how a program may access a database. The JDBC API contains:
+
+JdbcTemplate
+NamedParameterJdbcTemplate
+SimpleJdbcCall
+SimpleJdbcInsert
+SimpleJdbcTemplate
+The Spring MVC framework provides model-view-controller architecture and pre-made components used to develop loosely coupled web applications. Using MVC, you can separate different aspects of the program like a business, input, and UI logics while still having a loose coupling between each. This allows for greater flexibility in your web applications.
+
+
+25. What are the parts of Spring MVC framework?
+The three main parts of MVC are:
+
+DispatcherServlet: This part of MVC manages all the HTTP requests and responses that interact with the program. The DispatcherServlet first receives relevant handler mapping from the configuration file and then passes off the request to the controller. The DispatcherServlet is the most important part of the Spring Web MVC framework.
+WebApplicationContext: This acts as an extension of the plain ApplicationContext with extra features necessary for web applications. It can uniquely resolve themes and automatically decide which servlet it is associated with.
+Controllers: These are beans within the DispatcherServlet that act as filters between user input and application response. Controllers take user input, decide if it should be transformed into either a View or a Model, and finally returns the transformed input to the View Resolver for review.
+Handler Mapping: An interface that defines the mapping between handler and request objects. Can be used to create a custom mapping strategy.
+Controller: Determines the app’s response to user input by sorting input requests by their desired outcome. Input is either immediately returned with a View or is transformed into a Model before being passed to the view-resolver.
+View-Resolver: Takes and renders Models from the controller by mapping between View names and actual Views.
+To allow annotation wiring, include <context:annotation-config/> in your XML configuration file:
+
+<beans
+    //...
+    xmlns:context="http://www.springframework.org/schema/context"
+    //...
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    //...
+ 
+    <context:annotation-config /> //annotation wiring enabled here
+    //...
+</beans>
+Spring Boot is an open-source Java framework used to create microservices. It is a project built on top of Spring to simplify the task of deploying Java applications. Its two major components are the Spring Framework and Embedded HTTP Servers. Spring Boot is used to:
+
+Simplify the process of developing production-ready Spring applications
+Avoid XML configuration in Spring
+Reduce development time by decreasing the number of needed import statements
+Provide an opinionated development approach
+
+29. What is Reactive Programming?
+Reactive Programming is a programming paradigm that relies on programmed actions trigger on events rather than based on the chronological order of the code. Reactive programs make efficient use of computer resources and scale well with just a few threads. Its non-sequential form allows you to avoid stack blocking and maintain responsiveness.
+
+
+30. What is Spring Webflux?
+Webflux is a reactive web framework that serves as an alternative to MVC. Webflux provides better scalability and prevents stack blocking.
+
+
+Source: Prabu Subra on Medium
+31. What is the difference between the WebClient and Webtestclient?
+The WebClient is a component from the Web Reactive framework that makes it easier to build reactive and non-blocking web applications.
+
+The Webtestclient is a version of this client with all the same features but is disconnected from live environments. The test client doesn’t need an HTTP server live environment to work, making it a good test environment for new applications. It can connect to any server over an HTTP connection or sync directly with WebFlux to apply mock HTTP requests and generate response objects.
+
+32. Can Spring Boot allow Spring MVC or Spring WebFlux in the same application?
+Boot allows both in the same application but can only apply one at a time. WebFlux is a non-blocking framework while MVC is a blocking framework, making them incompatible together.
+
+33. Can Spring 5 Integrate with the Jdk9 Modularity?
+Yes, Spring 5 can integrate with Jdk9. Here’s how you can do it:
+
+Create a new class
+
+package com.hello;
+public class HelloWorld {
+    public String sayHello(){
+        return "HelloWorld";
+    }
+}
+module com.hello {
+    export com.hello;
+}
+module com.hello.client {
+    requires com.hello;
+}
+public class HelloWorldClient {
+    public static void main(String[] args){
+        HelloWorld helloWorld = new HelloWorld();
+        log.info(helloWorld.sayHello());
+    }
+}
+A Proxy is an object created after applying advice to a target object. Proxies are used to perform meta-programming operations like intercepting an object call or altering an object’s property.
+
+35. When is the target object and proxy object the same?
+This is a “gotcha” question used to test if you know how different object types interact. The target and proxy objects are the same when dealing with client objects.
+
+36. How can configuration metadata be provided to the Spring container?
+XML-Based Configuration: This type of configuration stores all of a program’s bean definitions and dependencies in an XML file. These files are imported by providing a full file path, like on line 1 below.
+
+<bean id="bean1" class="io.Educative.firstSpring.Bean1">
+ <property name="name" value="Educative"></property>
+</bean>
+<beans>
+<context:annotation-config/>
+<!-- bean definitions go here -->
+</beans>
+@Configuration
+public class BeanConfig
+{ 
+@Bean
+public Bean1 myBean() 
+{ return new Bean1(); }
+}
+DataAccessResourceFailureException
+CleanUpFailureDataAccessException
+InvalidDataAccessApiUsageException
+InvalidDataAccessResourceUsageException
+UncategorizedDataAccessException
+DataIntegrityViolationException
+DeadLockLoserDatAccessException
+OptimisticLockingFailureEexception
+IncorrectUpdateSemanticsDataAccessException
+TypeMismatchDataAccessException
+ObjectRetrievalFailureException
+DataRetrievalFailureException
+Hibernate ORM is an object-relational mapping framework for Java. It is used with Spring to map object-oriented domain models to a relational database. Hibernate can be accessed in Spring in the following two ways:
+
+First, extend HibernateDAOSupport and then apply an AOP Interceptor node
+Use Inversion of Control with Hibernate Template and Callback structures
+A concern is the target functionality we’re trying to implement into a particular module of our application.
+
+A cross-cutting concern is a concern that is used across the entire application rather than just in a particular module.
+
+Data logging is a good example of a cross-cutting concern as logging is useful and desired regardless of what module it is in.
+
+40. What are the types of transaction management available in Spring?
+Declarative transaction management: This type manages transactions using annotations or XML configurations to separate transaction management from the program’s business code. While easy to maintain, this style is more restricted in its capabilities.
+
+Programmatic transaction management: This type manages transactions with specifically made programs. The customization of these programs allows for more flexible management but introduces more room for error in the process.
+
+Wrapping Up and What to Learn Next
+Congratulations on completing these 40 Spring Framework interview questions. As with any interview, success in a Spring interview comes down to your preparation, practice with a variety of interview questions, experience with Spring projects, and familiarity with behavioral interview tips.
+
+Be sure to refresh your Java knowledge before studying Spring in depth.
+
+Even if you don’t get an offer your first time around, the experience and exposure will help you stand out when you reapply. The most important thing is to stay confident and trust that you deserve this job! Some projects you can explore to put your Spring knowledge into practice are:
+
+Agile Express
+Spring PetClinc
+Tudu Lists
+Spring Rich Client
+Java Small Business Platform
+
+===============================================================================================================================================
+Perguntas avançadas
+https://br.bitdegree.org/tutoriais/spring-mvc/
+
+Introdução
+Vamos começar este tutorial com o básico . Esses conceitos básicos são fundamentais e, se você for um desenvolvedor experiente do Spring MVC, você deve conhecê-los de cor. Mesmo se você conhece todas as perguntas e respostas nesta lista, uma revisão nunca fez mal a ninguém. Depois disso, vamos passar para as coisas mais avançadas.
+
+Pergunta 1: O que é Spring MVC?
+Antes de começarmos a falar sobre interceptores e joinpoints , precisamos primeiro passar pelas definições. 
+Seus potenciais empregadores provavelmente perguntarão as mesmas coisas no início de sua entrevista.
+
+Agora, quando se trata de perguntas baseadas em definições, sempre tente responder com suas próprias palavras. 
+Isso mostrará aos entrevistadores que você não é apenas um robô que memorizou inúmeras páginas de texto, mas também pode pensar por si mesmo.
+
+
+Agora, onde nós estávamos ..? Sim, Spring MVC. Então, o que é Spring?
+
+O Spring é um framework de código aberto baseado em Java. Ele foi projetado para ajudar os desenvolvedores Java a criar aplicativos Web específicos.
+
+Pergunta 2: Quantas versões da Spring existem?
+No total, existem 4 versões principais - 
+Spring 2.5; 
+Spring 3.0;
+Spring 4.0;
+Spring 5.0;
+
+Compare Online Learning Platforms Side by Side With Others
+Did you know?
+
+Have you ever wondered which online learning platforms are the best for your career?
+Pergunta 3: Para si quais são as principais vantagens do Spring?
+Verdade seja dita, esta é uma das perguntas mais subjetivas da entrevista, pois é quase completamente baseada em opiniões. Você deve pensar em sua própria experiência pessoal ao usar o Spring MVC, e o que você definiria como os melhores recursos do framework.
+
+Posso, no entanto, oferecer-lhe alguns exemplos de respostas mais populares: ele ser open-source, templates pré-feitos, facilidade de usar e testar , etc.
+
+Pergunta 4: O que é 'MVC'?
+MVC significa Model View Controller . É uma parte do framework Spring. O MVC é usado para promover a criação de diferentes aplicativos web.
+
+Pergunta 5: O que é 'injeção de dependência'?
+Injeção de dependência é usada para fornecer certas dependências específicas para objetos. É um design pattern que torna seus projetos mais suaves e mais adequados para ações como testes.
+
+Pergunta 6: O que é 'Boot'?
+Como você provavelmente já deve ter notado, você não estará recebendo apenas perguntas do Spring framework - isso seria fácil demais! Em vez disso, espera-se que você saiba tudo sobre suas várias extensões e atualizações também.
+
+O Spring Boot é uma versão do Spring que visa tornar o processo de criação de aplicativos mais simplificado . Uma de suas principais características é que elimina a necessidade de definir configurações padrão - com certeza, isso fará muitos desenvolvedores felizes.
+
+Pergunta 7: O que é um 'arquivo XML'?
+XML é um arquivo de configuração do Spring . É o principal tipo de arquivo que contém todas as informações sobre os diferentes tipos de classes e como elas estabelecem correlações umas com as outras.
+
+Pergunta 8: Quantos módulos diferentes existem no Spring MVC?
+O Spring possui cerca de vinte módulos. Todos eles são segmentados em containers separados. Os containers são os seguintes: o principal, de web, de acesso a dados, de aspecto e instrumentação e o de teste . Existem alguns containers menores também.
+
+Pergunta 9: Descreva 'IOC'
+IOC significa Inversion of Control . É o container central do Spring. Ele utiliza a injeção de dependência mencionada anteriormente para gerenciar e configurar os vários aplicativos integrados. Existem atualmente dois tipos de IOCs que podem ser localizados no Spring - ApplicationContext e BeanFactory .
+
+Pergunta 10: O que é um 'Bean'?
+"Bean" é um objeto que é integrado e configurado pelo container IOC .
+
+Pergunta 11: Por que você deve usar 'constructor injection' para injetar Beans?
+Note que a constructor injection é usado apenas para injetar dependências obrigatórias.
+
+Quanto ao motivo pelo qual você deve usar esse tipo de injeção em vez de qualquer outra coisa, é bem simples. Esse tipo de injeção torna os processos de teste posteriores muito mais fáceis.
+
+Pergunta 12: O que é um 'join point'?
+Um join point representa um ponto no programa onde o framework AOP será inicializado e aplicado.
+
+Pergunta 13: O que é AOP?
+AOP significa Programação Orientada a Aspectos . Ele difere do OOP ( Programação Orientada a Objetos ) em que OOP se concentra nas classes , enquanto a principal unidade de modularidade do AOP é o aspecto . Na AOP, os aspectos implementam e enfatizam as preocupações transversais.
+
+Pergunta 14: Qual é o uso do Boot 'Initilizr'?
+' Initilizr ' é um tópico que tende a aparecer nas perguntas da entrevista sobre Spring Boot com bastante frequência. É um componente bastante importante, então vamos rapidamente ver por que precisamos dele.
+
+Os desenvolvedores usam o ' Initilizr ' porque querem maximizar sua produtividade no menor tempo possível. A ferramenta é ótima, pois fornece um modelo inicial para o seu projeto e simplifica o processo de criação de scripts.
+
+Pergunta 15: O que é um "advice"?
+Lembra quando falamos sobre 'join point', onde AOP entra em jogo? Bem, sempre que um aspecto realiza algum tipo de ação dentro desse join point, essa ação é chamada de “advice”.
+
+The Most Liked Findings
+Looking for more in-depth information on related topics? We have gathered similar articles for you to spare your time. Take a look!
+
+O que é Net framework? 30 perguntas de entrevistas de emprego
+EDUCATION
+
+O que é Net framework? 30 perguntas de entrevistas de emprego
+O que é NET Framework? Um guia completo para você se preparar para a sua entrevista de emprego e começar a sua carreira com o .NET Framework.
+
+Top 10 Lugares para Praticar JavaScript Exercícios Online
+EDUCATION
+
+Top 10 Lugares para Praticar JavaScript Exercícios Online
+Discover 10 places to practice JavaScript exercises online and learn JavaScript free of charge. Practice JavaScript exercises & scale your career.
+
+Descubra tudo sobre o salário de um desenvolvedor de aplicativos
+EDUCATION
+
+Descubra tudo sobre o salário de um desenvolvedor de aplicativos
+Quer saber quanto ganha de salário um desenvolvedor de aplicativos mobile? Clique no link e saiba tudo sobre o salário de um desenvolvedor de aplicativos.
+
+Perguntas avançadas sobre Spring
+Agora que você já está aquecido com o básico, é hora de entrar nas perguntas e respostas da entrevista para desenvolvedores e programadores experientes.
+
+spring-interview-questions
+
+Veja estas perguntas avançadas como exemplos. Provavelmente seria impossível listar todas as possíveis variações dessas questões aqui, então eu escolhi algumas das principais. O que você pode fazer depois de ler este guia é encontrar equivalentes semelhantes para cada pergunta e resposta que você leu aqui. Dessa forma, você poderá cobrir a maior parte das possíveis perguntas da sua entrevista de emprego.
+
+Pergunta 1: Existem diferenças entre os dois tipos de IOC?
+Se você se lembra, uma das perguntas básicas era para explicar o IOC. Os dois tipos de IOC eram ApplicationContext e BeanFactory.
+
+Há uma diferença fundamental entre os dois tipos de IOC - ApplicationContext é um container avançado , enquanto o BeanFactory é básico. Isso significa que as funções do BeanFactory são promovidas pelo ApplicationContext.
+
+Pergunta 2: Por que razão 'annotation wiring' não funciona?
+Aqui, o seu potencial empregador está afirmando que a função de "annotation wiring" não funciona por algum motivo - e a razão é provavelmente bem simples.
+
+Por padrão, a annotation wiring estará desativada . Para fazê-lo funcionar, você teria que habilitá-lo em seus arquivos de configuração.
+
+Pergunta 3: Qual é a diferença entre preocupação "concern" e "cross-cutting"?
+'Concern' é usado quando você quer implementar uma função singular e específica em seu projeto (app). 'Cross-cutting' são funções que serão aplicadas por meio do projeto inteiro - todos os módulos do aplicativo serão afetados.
+
+Pergunta 4: O que é 'autowriting'?
+' Autowriting ' permite que o desenvolvedor injete beans em seu aplicativo automaticamente, sem a necessidade de intervenção manual.
+
+Pergunta 5: Para que fins weaving é usado?
+' Weaving' é usado para criar objetos recomendados. Isso é feito vinculando certos aspectos a outros objetos específicos no aplicativo.
+
+Pergunta 6: Como você pode gerenciar transações no Spring MVC?
+Spring permite dois tipos de gerenciamento de transações: declarativo e programático.
+
+O gerenciamento de transação declarativa é quando você separa seu código das transações em si. Uma de nossas perguntas anteriores (pergunta número 7 da primeira parte do tutorial) falou sobre XML. Isso é importante agora porque muitos desenvolvedores recorrem a configurações XML para gerenciar suas transações dessa maneira.
+
+O gerenciamento de transações programáticas envolve seu código comercial no gerenciamento de transações. Isso tende a ser a escolha menos popular de gerenciar transações. Existem algumas razões para isso, mas o principal tem a ver com o código. Muitos programadores não querem brincar com o código para não quebrar algo no processo.
+
+Pergunta 7: O que é um 'target object'?
+Quando um objeto se torna o centro das atenções para aspectos, ele se torna automaticamente um target object . Algumas pessoas também gostam de se referir a ele como "advised object".
+
+Pergunta 8: O que o @Controller faz?
+@Controller nomeia uma classe Spring designada específicamente como a classe do controlador.
+
+Pergunta 9: o que é DAO?
+No Spring, o DAO é abreviatura para Data Access Object . Essa ferramenta permite que os desenvolvedores abordem e trabalhem mais facilmente com ferramentas de acesso a dados, especialmente as de origem Java.
+
+Pergunta 10: O que o @Autowired faz?
+O comando @Autowired oferece a flexibilidade de decidir onde você deseja conectar seu objeto. Este comando torna o processo muito mais fácil e suave, permitindo maior precisão.
+
+Pergunta 11: O que o @RequestMapping faz?
+Este comando é usado sempre que você deseja mapear um método HTTP específico para uma classe específica. Você pode usar esse comando nos níveis de classe e método.
+
+Pergunta 12: O que é um MVC Interceptor?
+No Spring MVC, os interceptores podem ser usados ​​para processar uma solicitação de cliente antes, durante e mesmo depois do manuseio. É uma ótima ferramenta para evitar qualquer repetição indesejada do código.
+
+
+Pergunta 13: Qual é o uso que damos ao 'introduction'?
+O comando ' introduction ' permite adicionar novos atributos a uma classe que já foi reenviada no Spring.
+
+Pergunta 14: O que acontece quando você usa o @Autowire junto com o @Qualifier?
+Esse tipo de combinação é usado quando há muitos tipos diferentes de um único bean no aplicativo. Essa combinação diferencia entre cada um dos beans individuais.
+
+Como você provavelmente já notou, existem algumas questões baseadas nos controladores  “ @ ”. É por isso que é importante saber o que cada um dos controladores “ @ ” faz, portanto, certifique-se de os memorizar!
+
+
+Pergunta 15: O que é configuração de container baseada em anotação?
+É uma configuração de container alternativa ao XML mencionado anteriormente. Esse tipo de configuração é focado principalmente nos metadados do bytecode.
+
+Resumo
+spring-interview-questions
+
+Essas foram algumas das perguntas que você pode encontrar durante a sua entrevista de emprego.
+
+Provavelmente, a dica mais importante que eu posso lhe dar é estudar quantas variações diferentes dessas questões você puder encontrar . Basta escolher uma pergunta aleatória deste tutorial, ir ao google para encontrar definições mais amplas dos termos e, em seguida, ver quais perguntas semelhantes você pode encontrar.
+
+Durante a entrevista propriamente dita, sempre tente adicionar sua própria opinião, especialmente se a questão for baseada em uma definição. Seus empregadores provavelmente apreciarão o fato de que você está tentando colocar termos e conceitos complicados em suas próprias palavras. E não se esqueça de revisar as perguntas sobre Spring Boot ou Spring MVC.
+
+The Most Trending Findings
+Browse our collection of the most thorough Online Learning Platform related articles, guides & tutorials. Always be in the know & make informed decisions!
+
+Os segredos do salário de UX Designer - Revelado!
+EDUCATION
+
+Os segredos do salário de UX Designer - Revelado!
+Complete guide to UX designer salary: find out how much can user experience designer make & learn everything about different UX designer salary rates.
+
+Salário Data Analyst - Verdade ou Ficção?
+EDUCATION
+
+Salário Data Analyst - Verdade ou Ficção?
+Wondering how high can data analyst salary be? Follow this complete guide & find out everything about entry-level, junior & senior data analyst salary.
+
+Aprenda HTML: Descubra como aprender HTML de uma forma rápida
+EDUCATION
+
+Aprenda HTML: Descubra como aprender HTML de uma forma rápida
+Aprender HTML para muitos não é uma tarefa fácil, por isso, montamos este guia com dicas práticas para quem quer acelerar o processo de aprender HTML.
+
+Conclusão
+Neste tutorial, abordamos o básico, e também perguntas e respostas para desenvolvedores Spring experientes.
+
+Lembre-se: quanto mais tempo você dedica a estudar as perguntas e respostas, maior a probabilidade de você conseguir o emprego dos seus sonhos. Faça o seu melhor, tente não se estressar com isso e aprenda com a experiência que você terá!
+
+
+=================================================================================================================================
+Spring Boot
+Spring Framework
+Spring Data
+Spring Cloud
+Spring Cloud Data Flow
+Spring Security
+Spring GraphQL
+Spring Session
+Spring Integration
+Spring HATEOAS
+Spring REST Docs
+Spring Batch
+Spring AMQP
+Spring CredHub
+Spring Flo
+Spring for Apache Kafka
+Spring LDAP
+Spring Roo
+Spring Shell
+Spring Statemachine
+Spring Vault
+Spring Web Flow
+Spring Web Services
+
+
+
+
+Spring Boot Annotations is a form of metadata that provides data about a program that is not a part of the program itself. They do not have any direct effect on the operation of the code they annotate. Spring Boot Annotations do not use XML and instead use the convention over configuration principle. 
+
+Given below are some important Spring Boot Annotations.
+
+Table of Contents	
+Spring Boot Annotations Everyone Should Know
+1. @Bean
+2. @Service
+3. @Repository
+4. @Configuration
+5. @Controller
+6. @RequestMapping
+7. @Autowired
+8. @Component
+9. @SpringBootApplication
+10. @EnableAutoConfiguration
+11. @ComponetScan
+12. @Required
+13. @Qualifier
+14. @CookieValue
+15. @Lazy
+
+Conclusion
+Spring Boot Annotations Everyone Should Know
+
+1. @Bean
+The @Bean annotations are used at the method level and indicate that a method produces a bean that is to be managed by Spring container. It is an alternative to the XML<bean> tag. 
+
+Example:
+
+@Bean
+Public BeanExample beanExample (){
+return new BeanExample ()
+}
+
+2. @Service
+It is used at the class level. It shows that the annotated class is a service class, such as business basic logic, and call external APIs.
+Example:
+
+@Service
+public class TestService{
+    public void service1(){
+        // business code
+    }
+}
+
+Read: Spring Boot Projects & Topics
+
+3. @Repository
+It is a Data Access Object (DAO) that accesses the database directly. It indicates that the annotated class is a repository. 
+Example:
+
+@Repository
+public class TestRepository {
+    public void delete(){
+    // persistence code
+    }
+
+}
+
+4. @Configuration
+It is used as a source of bean definitions. It is a class-level annotation.
+Example:
+
+@Configuration
+public class Bus{
+
+@Bean
+Bus engine(){
+    return new Bus();
+}
+}
+
+5. @Controller
+The annotation is used to indicate that the class is a web request handler. It is often used to present web pages. It is most commonly used with @RequestMapping annotation. 
+
+Example:
+
+@Controller
+@RequestMapping(“cars”)
+public class CarsController {
+@RequestMapping(value= “/{name}”, method= RequestMethod.GET)
+
+    public Employee getCarsByName(){
+        return carsTemplate;
+    }
+}
+
+6. @RequestMapping
+RequestMapping is used to map the HTTP request. It is used with the class as well as the method. It has many other optional elements like consumes, name, method, request, path, etc.
+
+Example:
+
+@Controller
+
+public class FlowersController
+
+{
+
+@RequestMapping (“/red-colour/flowers”)
+
+public String getAllFlowers(Model model)
+
+{
+
+//application code
+
+return “flowerlist”;
+
+}
+
+7. @Autowired
+This annotation is used to auto-wire spring bean on setter methods, constructor and instance variable. It injects object dependency implicitly. When we use this annotation, the spring container auto-wires the bean by its matching data type.
+
+Example:
+
+@Component
+
+public class Employee
+
+private Person person;
+
+@Autowired
+
+public Employee(Person person)
+
+{
+
+this.person=person
+
+}
+
+}
+
+Also Read: Spring Developer Salary in India
+
+8. @Component
+It is a class-level annotation that turns the class into Spring bean at the auto-scan time.
+
+Example:
+
+@Component
+
+Public class Teachers
+
+{
+
+……
+
+}
+
+9. @SpringBootApplication
+It consists of @Configuration, @ComponentScan, and @EnabeAutoConfiguration. The class annotated with @SpringBootApplication is kept in the base package. This annotation does the component scan. However, only the sub-packages are scanned. 
+
+10. @EnableAutoConfiguration
+It is placed on the main application class. Based on classpath settings, other beans, and various property settings, this annotation instructs SpringBoot to start adding beans.
+
+11. @ComponetScan
+It is used to scan a package of beans. It is used with the annotation @Configuration to allow Spring to know the packages to be scanned for annotated components. This annotation is also used to specify base packages.
+
+Example:
+
+@ComponentScan(basePackages = “com.xyz”)
+
+@Configuration
+
+Public class ScanComponent
+
+{
+
+//…
+
+}
+
+12. @Required
+This annotation is applied to bean setter methods. It indicates that the required property must be filled at the configuration time in the affected bean, or else it throws an exception: BeanInitializationException.
+
+
+13. @Qualifier
+It is used along with @Autowired annotation. It is used when more control is required over the dependency injection process. Individual constructor arguments or method parameters can be specified by using this annotation. Confusion arises when more than one bean of the same type is created, and only one of them is to be wired with a property, @Qualifier is used to get rid of the confusion.
+
+14. @CookieValue
+It is used at the method parameter level as an argument of the request mapping method. For a given cookie name, the HTTP cookie is bound to a @CookieValue parameter.
+
+15. @Lazy
+It is used in the component class. At startup, all auto-wired dependencies are created and configured. But a @Lazy annotation can be created if a bean is to be initialized lazily. This means that only if it is requested for a bean will be created. It can also be used on @Configuartion classes. It’s an indication that all @Bean methods within that @Configuration should be lazily initialized.
+
+Check out: Spring Bean Life Cycle Explained
+
+Conclusion
+Spring Boot has made it easy for Java developers to create Spring applications with ease. As a Java enthusiast or a professional, you should be aware of the basic Spring boot annotations. We hope that this blog helped you understand them. You can take the first step towards a successful Java career by enrolling for upGrad and IIIT-B’s PG Diploma in Full Stack Development.
+
+
+SOLID stands for:
+
+S - Single-responsiblity Principle
+O - Open-closed Principle
+L - Liskov Substitution Principle
+I - Interface Segregation Principle
+D - Dependency Inversion Principle
+In this article, you will be introduced to each principle individually to understand how SOLID can help make you a better developer.
+
+Single-Responsibility Principle
+Single-responsibility Principle (SRP) states:
+
+A class should have one and only one reason to change, meaning that a class should have only one job.
+
+For example, consider an application that takes a collection of shapes—circles, and squares—and calculates the sum of the area of all the shapes in the collection.
+
+First, create the shape classes and have the constructors set up the required parameters.
+
+For squares, you will need to know the length of a side:
+
+class Square
+{
+    public $length;
+
+    public function construct($length)
+    {
+        $this->length = $length;
+    }
+}
+ 
+For circles, you will need to know the radius:
+
+class Circle
+{
+    public $radius;
+
+    public function construct($radius)
+    {
+        $this->radius = $radius;
+    }
+}
+ 
+Next, create the AreaCalculator class and then write up the logic to sum up the areas of all provided shapes. The area of a square is calculated by length squared. The area of a circle is calculated by pi times radius squared.
+
+class AreaCalculator
+{
+    protected $shapes;
+
+    public function __construct($shapes = [])
+    {
+        $this->shapes = $shapes;
+    }
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            if (is_a($shape, 'Square')) {
+                $area[] = pow($shape->length, 2);
+            } elseif (is_a($shape, 'Circle')) {
+                $area[] = pi() * pow($shape->radius, 2);
+            }
+        }
+
+        return array_sum($area);
+    }
+
+    public function output()
+    {
+        return implode('', [
+          '',
+              'Sum of the areas of provided shapes: ',
+              $this->sum(),
+          '',
+      ]);
+    }
+}
+ 
+To use the AreaCalculator class, you will need to instantiate the class and pass in an array of shapes and display the output at the bottom of the page.
+
+Here is an example with a collection of three shapes:
+
+a circle with a radius of 2
+a square with a length of 5
+a second square with a length of 6
+$shapes = [
+  new Circle(2),
+  new Square(5),
+  new Square(6),
+];
+
+$areas = new AreaCalculator($shapes);
+
+echo $areas->output();
+ 
+The problem with the output method is that the AreaCalculator handles the logic to output the data.
+
+Consider a scenario where the output should be converted to another format like JSON.
+
+All of the logic would be handled by the AreaCalculator class. This would violate the single-responsibility principle. The AreaCalculator class should only be concerned with the sum of the areas of provided shapes. It should not care whether the user wants JSON or HTML.
+
+To address this, you can create a separate SumCalculatorOutputter class and use that new class to handle the logic you need to output the data to the user:
+
+class SumCalculatorOutputter
+{
+    protected $calculator;
+
+    public function __constructor(AreaCalculator $calculator)
+    {
+        $this->calculator = $calculator;
+    }
+
+    public function JSON()
+    {
+        $data = [
+          'sum' => $this->calculator->sum(),
+      ];
+
+        return json_encode($data);
+    }
+
+    public function HTML()
+    {
+        return implode('', [
+          '',
+              'Sum of the areas of provided shapes: ',
+              $this->calculator->sum(),
+          '',
+      ]);
+    }
+}
+ 
+The SumCalculatorOutputter class would work like this:
+
+$shapes = [
+  new Circle(2),
+  new Square(5),
+  new Square(6),
+];
+
+$areas = new AreaCalculator($shapes);
+$output = new SumCalculatorOutputter($areas);
+
+echo $output->JSON();
+echo $output->HTML();
+ 
+Now, the logic you need to output the data to the user is handled by the SumCalculatorOutputter class.
+
+That satisfies the single-responsibility principle.
+
+Open-Closed Principle
+Open-closed Principle (OCP) states:
+
+Objects or entities should be open for extension but closed for modification.
+
+This means that a class should be extendable without modifying the class itself.
+
+Let’s revisit the AreaCalculator class and focus on the sum method:
+
+class AreaCalculator
+{
+    protected $shapes;
+
+    public function __construct($shapes = [])
+    {
+        $this->shapes = $shapes;
+    }
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            if (is_a($shape, 'Square')) {
+                $area[] = pow($shape->length, 2);
+            } elseif (is_a($shape, 'Circle')) {
+                $area[] = pi() * pow($shape->radius, 2);
+            }
+        }
+
+        return array_sum($area);
+    }
+}
+ 
+Consider a scenario where the user would like the sum of additional shapes like triangles, pentagons, hexagons, etc. You would have to constantly edit this file and add more if/else blocks. That would violate the open-closed principle.
+
+A way you can make this sum method better is to remove the logic to calculate the area of each shape out of the AreaCalculator class method and attach it to each shape’s class.
+
+Here is the area method defined in Square:
+
+class Square
+{
+    public $length;
+
+    public function __construct($length)
+    {
+        $this->length = $length;
+    }
+
+    public function area()
+    {
+        return pow($this->length, 2);
+    }
+}
+ 
+And here is the area method defined in Circle:
+
+class Circle
+{
+    public $radius;
+
+    public function construct($radius)
+    {
+        $this->radius = $radius;
+    }
+
+    public function area()
+    {
+        return pi() * pow($shape->radius, 2);
+    }
+}
+ 
+The sum method for AreaCalculator can then be rewritten as:
+
+class AreaCalculator
+{
+    // ...
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            $area[] = $shape->area();
+        }
+
+        return array_sum($area);
+    }
+}
+ 
+Now, you can create another shape class and pass it in when calculating the sum without breaking the code.
+
+However, another problem arises. How do you know that the object passed into the AreaCalculator is actually a shape or if the shape has a method named area?
+
+Coding to an interface is an integral part of SOLID.
+
+Create a ShapeInterface that supports area:
+
+interface ShapeInterface
+{
+    public function area();
+}
+ 
+Modify your shape classes to implement the ShapeInterface.
+
+Here is the update to Square:
+
+class Square implements ShapeInterface
+{
+    // ...
+}
+ 
+And here is the update to Circle:
+
+class Circle implements ShapeInterface
+{
+    // ...
+}
+ 
+In the sum method for AreaCalculator, you can check if the shapes provided are actually instances of the ShapeInterface; otherwise, throw an exception:
+
+class AreaCalculator
+{
+    // ...
+
+    public function sum()
+    {
+        foreach ($this->shapes as $shape) {
+            if (is_a($shape, 'ShapeInterface')) {
+                $area[] = $shape->area();
+                continue;
+            }
+
+            throw new AreaCalculatorInvalidShapeException();
+        }
+
+        return array_sum($area);
+    }
+}
+ 
+That satisfies the open-closed principle.
+
+Liskov Substitution Principle
+Liskov Substitution Principle states:
+
+Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
+This means that every subclass or derived class should be substitutable for their base or parent class.
+Building off the example AreaCalculator class, consider a new VolumeCalculator class that extends the AreaCalculator class:
+
+class VolumeCalculator extends AreaCalculator
+{
+    public function construct($shapes = [])
+    {
+        parent::construct($shapes);
+    }
+
+    public function sum()
+    {
+        // logic to calculate the volumes and then return an array of output
+        return [$summedData];
+    }
+}
+ 
+Recall that the SumCalculatorOutputter class resembles this:
+
+class SumCalculatorOutputter {
+    protected $calculator;
+
+    public function __constructor(AreaCalculator $calculator) {
+        $this->calculator = $calculator;
+    }
+
+    public function JSON() {
+        $data = array(
+            'sum' => $this->calculator->sum();
+        );
+
+        return json_encode($data);
+    }
+
+    public function HTML() {
+        return implode('', array(
+            '',
+                'Sum of the areas of provided shapes: ',
+                $this->calculator->sum(),
+            ''
+        ));
+    }
+}
+ 
+If you tried to run an example like this:
+
+$areas = new AreaCalculator($shapes);
+$volumes = new VolumeCalculator($solidShapes);
+
+$output = new SumCalculatorOutputter($areas);
+$output2 = new SumCalculatorOutputter($volumes);
+ 
+When you call the HTML method on the $output2 object, you will get an E_NOTICE error informing you of an array to string conversion.
+
+To fix this, instead of returning an array from the VolumeCalculator class sum method, return $summedData:
+
+class VolumeCalculator extends AreaCalculator
+{
+    public function construct($shapes = [])
+    {
+        parent::construct($shapes);
+    }
+
+    public function sum()
+    {
+        // logic to calculate the volumes and then return a value of output
+        return $summedData;
+    }
+}
+ 
+The $summedData can be a float, double or integer.
+
+That satisfies the Liskov substitution principle.
+
+Interface Segregation Principle
+Interface segregation principle states:
+
+A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
+
+Still building from the previous ShapeInterface example, you will need to support the new three-dimensional shapes of Cuboid and Spheroid, and these shapes will need to also calculate volume.
+
+Let’s consider what would happen if you were to modify the ShapeInterface to add another contract:
+
+interface ShapeInterface
+{
+    public function area();
+
+    public function volume();
+}
+ 
+Now, any shape you create must implement the volume method, but you know that squares are flat shapes and that they do not have volumes, so this interface would force the Square class to implement a method that it has no use of.
+
+This would violate the interface segregation principle. Instead, you could create another interface called ThreeDimensionalShapeInterface that has the volume contract and three-dimensional shapes can implement this interface:
+
+interface ShapeInterface
+{
+    public function area();
+}
+
+interface ThreeDimensionalShapeInterface
+{
+    public function volume();
+}
+
+class Cuboid implements ShapeInterface, ThreeDimensionalShapeInterface
+{
+    public function area()
+    {
+        // calculate the surface area of the cuboid
+    }
+
+    public function volume()
+    {
+        // calculate the volume of the cuboid
+    }
+}
+ 
+This is a much better approach, but a pitfall to watch out for is when type-hinting these interfaces. Instead of using a ShapeInterface or a ThreeDimensionalShapeInterface, you can create another interface, maybe ManageShapeInterface, and implement it on both the flat and three-dimensional shapes.
+
+This way, you can have a single API for managing the shapes:
+
+interface ManageShapeInterface
+{
+    public function calculate();
+}
+
+class Square implements ShapeInterface, ManageShapeInterface
+{
+    public function area()
+    {
+        // calculate the area of the square
+    }
+
+    public function calculate()
+    {
+        return $this->area();
+    }
+}
+
+class Cuboid implements ShapeInterface, ThreeDimensionalShapeInterface, ManageShapeInterface
+{
+    public function area()
+    {
+        // calculate the surface area of the cuboid
+    }
+
+    public function volume()
+    {
+        // calculate the volume of the cuboid
+    }
+
+    public function calculate()
+    {
+        return $this->area();
+    }
+}
+ 
+Now in AreaCalculator class, you can replace the call to the area method with calculate and also check if the object is an instance of the ManageShapeInterface and not the ShapeInterface.
+
+That satisfies the interface segregation principle.
+
+Dependency Inversion Principle
+Dependency inversion principle states:
+
+Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
+
+This principle allows for decoupling.
+
+Here is an example of a PasswordReminder that connects to a MySQL database:
+
+class MySQLConnection
+{
+    public function connect()
+    {
+        // handle the database connection
+        return 'Database connection';
+    }
+}
+
+class PasswordReminder
+{
+    private $dbConnection;
+
+    public function __construct(MySQLConnection $dbConnection)
+    {
+        $this->dbConnection = $dbConnection;
+    }
+}
+ 
+First, the MySQLConnection is the low-level module while the PasswordReminder is high level, but according to the definition of D in SOLID, which states to Depend on abstraction, not on concretions. This snippet above violates this principle as the PasswordReminder class is being forced to depend on the MySQLConnection class.
+
+Later, if you were to change the database engine, you would also have to edit the PasswordReminder class, and this would violate the open-close principle.
+
+The PasswordReminder class should not care what database your application uses. To address these issues, you can code to an interface since high-level and low-level modules should depend on abstraction:
+
+interface DBConnectionInterface
+{
+    public function connect();
+}
+ 
+The interface has a connect method and the MySQLConnection class implements this interface. Also, instead of directly type-hinting MySQLConnection class in the constructor of the PasswordReminder, you instead type-hint the DBConnectionInterface and no matter the type of database your application uses, the PasswordReminder class can connect to the database without any problems and open-close principle is not violated.
+
+class MySQLConnection implements DBConnectionInterface
+{
+    public function connect()
+    {
+        // handle the database connection
+        return 'Database connection';
+    }
+}
+
+class PasswordReminder
+{
+    private $dbConnection;
+
+    public function __construct(DBConnectionInterface $dbConnection)
+    {
+        $this->dbConnection = $dbConnection;
+    }
+}
+ 
+This code establishes that both the high-level and low-level modules depend on abstraction.
+
+Conclusion
+In this article, you were presented with the five principles of SOLID Code. Projects that adhere to SOLID principles can be shared with collaborators, extended, modified, tested, and refactored with fewer complications.
+
+Continue your learning by reading about other practices for Agile and Adaptive software development.
+
+
+Spring supports the following ORM's:
+Hibernate
+iBatis
+JPA (Java Persistence API)
+TopLink
+JDO (Java Data Objects)
+OJB
+
+
+Q6: What is Application Context?  
+Answer
+On the surface, an application context is the same as a bean factory. Both load bean definitions, wire beans together, and dispense beans upon request. But it also provides:
+A means for resolving text messages, including support for internationalization
+A generic way to load file resources
+Events to beans that are registered as listener
+
+
+Q16: What is Spring Security?  
+Answer
+Spring Security is a separate module of the Spring framework that focuses on providing authentication and authorization methods in Java applications. It also takes care of most of the common security vulnerabilities such as CSRF attacks.
+To use Spring Security in web applications, you can get started with a simple annotation: @EnableWebSecurity.
+
+
+Senior:
+
+
+
+

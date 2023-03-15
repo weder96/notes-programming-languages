@@ -1,0 +1,313 @@
+
+O que são microsserviços?
+
+São uma abordagem de arquitetura na qual o software consiste de pequenos serviços independentes que se comunicam entre si e são organizados de acordo com seus domínios de negócio.
+
+Em arquiteturas monolíticas, os processos são extremamente acoplados e são executados como um único serviço , sendo assim se uma parte do sistema tiver a necessidade de escalar será necessário escalar o sistema todo.
+Microsserviços são autônomos, cada serviço pode ser desenvolvido, implantado e escalado sem interferir em outros serviços.
+
+Microsserviços são especialistas, cada serviço é desenhado para resolver um problema específico, se for necessário adicionar código de outras responsabilidades é recomendável separar em outro serviço.
+
+Microsserviços são resilientes, a independência do serviço aumenta a resiliência a falhas na arquitetura, se um deles tiver problema , só afetará a parte do fluxo pela qual ele é responsável.
+
+Microsserviços facilitam a reutilização de código, a divisão em módulos com responsabilidades bem definidas possibilita que funções específicas de um serviço possam ser utilizadas para complementar features sem outros sem a necessidade de escrever um código novo.
+
+Microsserviços permitem ter liberdade na escolha da stack, pois n microsserviços de n linguagens diferentes podem se comunicar via endpoints sem problemas.
+
+Spring Cloud
+Fornece uma série de ferramentas que facilitam a criação de aplicações distribuídas e escaláveis.
+
+Dentre as funcionalidades podemos citar:
+
+Service Discovery
+Que permite que outros serviços "descubram" facilmente a rota dos serviços que precisam acessar
+
+Mais conhecidos do Spring Cloud:
+Spring Cloud Netflix Eureka
+Spring Cloud Consul
+
+Gateway
+Tem o papel de ser um intermediário nas requisições para outros serviços.
+
+Mais conhecidos do Spring Cloud:
+Spring Cloud Gateway
+Zuul
+Config server
+
+Permite armazenar configurações de aplicações de modo centralizado fora da aplicação (por ex, em um repositório que centralize todas as configurações de todos os microsserviços.
+
+Config Server
+
+Load Balancer
+É responsável por distribuir de forma eficiente o tráfego de requisições dentre as instâncias de um mesmo serviço.
+
+Mais conhecidos no Spring
+
+Ribbon
+Spring Cloud Load Balancer
+
+Feign
+Facilita a criação e utilização de Clients HTTP.
+
+Feign
+
+Circuit Breaker
+Facilita o acompanhamento e controle de falhas e altas taxas de latências entre os serviços.
+
+Mais conhecidos no Spring:
+Hystrix
+Resilience4J
+
+Observable lifecycle:
+Followings are the 4 stages of the observable lifecycle:
+
+Creation
+Subscription
+Execution
+Destruction
+ 
+Observables Creation
+
+For creating an Observable, first import Observable from RxJS.
+
+        import { Observable } from "rxjs";
+        var observable = Observable.create((observer:any) => {
+            observer.next('Hello World!')
+        })
+    
+
+
+Padrão de Arquitetura Hexagonal
+Há uma frase que ouvi uma vez relacionada à vida, mas que também se aplica ao desenvolvimento de software :
+
+"Uma pessoa imatura pensa que todas as suas escolhas geram ganhos... uma pessoa madura sabe que todas as escolhas têm perdas". (Augusto Cury)
+Em geral, quanto mais ferramentas você conhece e quanto mais informações você tem sobre suas vantagens e custos, você tende a fazer uma melhor escolha de qual ferramenta usar como solução de acordo com o desafio apresentado.bem, vamos entender o padrão da Arquitetura Hexagonal.
+
+Crie sua aplicação para trabalhar sem uma UI ou banco de dados, ao qual você pode executar testes automáticos de regressão, implementar quando o banco de dados não estiver disponível e conectar aplicações sem envolvê-las. (Alistair Cockburn)
+Assim começa o post, extraído da documentação do site de Alistair Cockburn, criador do padrão da Arquitetura Hexagonal ou mesmo conhecido como o padrão de portas e adaptadores.
+
+Uma das razões para criar este padrão foi principalmente delegar a infra-estrutura e UI parte do projeto, concentrar-se na regra de negócios e torná-la funcional, além de não misturá-la, ou seja, uma regra de negócios no banco de dados ou mesmo na parte UI de um projeto.
+
+A arquitetura hexagonal é compartilhada em 3 partes:
+
+Centro do Hexágono
+Lado esquerdo do hexágono
+Lado direito do hexágono
+Neste cenário, temos os atores que irão interagir com o centro do hexágono:
+
+O ator principal, que conduzirá uma ação;
+O ator secundário a ser liderado.
+Uma pergunta comum é a diferença entre os atores: quem são os principais atores na minha aplicação? Quem são os atores secundários?
+
+Para responder a esta pergunta, é necessário fazer outra pergunta:
+
+"Quem inicia a conversa?
+"Isto é, quem é responsável por iniciar o fluxo, o ator que realiza uma ação?
+Ao responder esta pergunta, você terá os atores principais, não importa se é uma pessoa, outro sistema, um script em bash que chama seu adapter, se dispara um gatilho que chama o core business de sua aplicação, então ele é o ator principal.
+
+Então, o ator secundário será levado a realizar uma determinada ação que o ator primário tenha desencadeado. Pode ser gravar dados, registrá-los, ou mesmo chamar uma terceira aplicação e obter uma resposta, retornando ao ator primário.
+
+O centro do hexágono
+É onde estão localizados os modelos, domínios e regras de negócios de seu software . É um ambiente que deve ser totalmente isolado em termos de não ser afetado por ocorrências externas, por exemplo, o banco de dados que será utilizado, framework frontend.
+
+Lado esquerdo do hexágono
+É o lado do ator principal, o lado do usuário, que conduz uma ação, pois este é o lado do usuário que realiza alguma tarefa.
+
+Lado direito do hexágono
+É o lado do ator secundário, lado dos dados, que é conduzido, seja para escrever dados, ler dados, modificar dados, e apagar dados.
+
+Portas
+As portas são a comunicação gateway entre o centro de seu hexágono com os lados esquerdo e direito do seu hexágono, com os lados externos.
+
+Adapters
+Os adaptadores são os usuários das portas. Para cada porta que seu hexágono possui, um adaptador deve ser criado, portanto, você tem a liberdade de modificá-lo e apagá-lo dinamicamente. Em portas e adaptadores, temos também o conceito de portas primárias e secundárias, e o conceito é o mesmo utilizado com os atores.
+
+Nos atores primários de nossa aplicação temos os condutores da ação, que utilizarão os adaptadores primários, e isto "baterá" nas portas primárias. Assim, as portas secundárias e os adaptadores conduzirão a ação até o ator secundário no fluxo contínuo da aplicação.
+
+Inversão de Controle (IoC)
+Em um fluxo real, usando como exemplo o simples registro de dados, teríamos o seguinte:
+
+O lado esquerdo (o condutor) entrega as informações, usando um adaptador e através da porta principal, ao centro do hexágono (domínio).
+O centro do hexágono, então, recebe dados através da porta, depois os processa usando uma porta secundária e chama o lado direito.
+O lado direito (o conduzido) chama um banco de dados para registrá-los.
+No final, teríamos isto como o fluxo do Hexágono:
+
+Lado esquerdo -> Centro -> Lado direito
+Mas este cenário impacta os conceitos da Arquitetura Hexagonal, que é que o domínio deve ser isolado e responsável apenas pela regra de negócio, pois no exemplo acima, teria que ser responsável por chamar a entidade responsável pela gravação.
+
+Agora, surge o conceito de Inversão de Controle (IoC).
+
+Inversão de Controle (IoC) é um padrão que defende o uso de instâncias de uma determinada classe, tratando-a externamente e não dentro da classe em questão, ou seja, delegando o controle de uma classe para outra. Ela pode ser uma interface, componente, serviço, etc.
+
+Em nosso caso, ele inverterá precisamente a ordem de fluxo, assegurando que, ainda usando o exemplo, nosso banco de dados vá para nosso centro e não para o outro lado, deixando nosso domínio realmente isolado.
+
+No final, este seria o nosso fluxo correto:
+
+Lado esquerdo -> Centro <- Ioc - Lado direito
+Pontos positivos
+Como pontos fortes da utilização desta arquitetura, podemos enumerar:
+
+Solução de Serviços Externos Independentes
+Possibilita adiar algumas decisões técnicas
+Criação e substituição de adaptadores
+Fácil de testar a aplicação
+Tecnologias fáceis de trocar
+Pontos negativos
+Também temos alguns aspectos negativos no uso desta arquitetura hexagonal, que são
+
+Complexidade adicional (construção de mais camadas)
+Custo de criação e manutenção
+Não há orientação sobre como organizar o código (diretórios, camadas)
+ 
+
+Clean Code: 
+
+The DRY Principle: Don't Repeat Yourself
+KISS: Keep It Simple, Stupid
+
+
+O que é SOLID?
+SOLID é um acrônimo criado por Michael Feathers, após observar que cinco princípios da orientação a objetos e design de código — Criados por Robert C. Martin (a.k.a. Uncle Bob) e abordados no artigo The Principles of OOD — poderiam se encaixar nesta palavra.
+S.O.L.I.D: Os 5 princípios da POO
+S — Single Responsiblity Principle (Princípio da responsabilidade única)
+Esse princípio declara que uma classe deve ser especializada em um único assunto e possuir apenas uma responsabilidade dentro do software, ou seja, a classe deve ter uma única tarefa ou ação para executar.
+
+O — Open-Closed Principle (Princípio Aberto-Fechado)
+Princípio Aberto-Fechado — Objetos ou entidades devem estar abertos para extensão, mas fechados para modificação, ou seja, quando novos comportamentos e recursos precisam ser adicionados no software, devemos estender e não alterar o código fonte original.
+Separe o comportamento extensível por trás de uma interface e inverta as dependências.
+
+L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+Princípio da substituição de Liskov — Uma classe derivada deve ser substituível por sua classe base.
+se S é um subtipo de T, então os objetos do tipo T, em um programa, podem ser substituídos pelos objetos de tipo S sem que seja necessário alterar as propriedades deste programa.
+
+I — Interface Segregation Principle (Princípio da Segregação da Interface)
+Princípio da Segregação da Interface — Uma classe não deve ser forçada a implementar interfaces e métodos que não irão utilizar. Esse princípio basicamente diz que é melhor criar interfaces mais específicas ao invés de termos uma única interface genérica.
+
+D — Dependency Inversion Principle (Princípio da inversão da dependência)
+1. Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender da abstração.
+2. Abstrações não devem depender de detalhes. Detalhes devem depender de abstrações.
+
+
+“Programe para uma interface e não para uma implementação.”
+
+interface DBConnectionInterface
+{
+    public function connect();
+}
+
+
+class MySQLConnection implements DBConnectionInterface
+{
+    public function connect()
+    {
+        // ...
+    }
+}
+
+class OracleConnection implements DBConnectionInterface
+{
+    public function connect()
+    {
+        // ...
+    }
+}
+
+class PasswordReminder
+{
+    private DBConnectionInterface dbConnection;
+
+    public function __construct(DBConnectionInterface dbConnection) {
+        this.dbConnection = dbConnection;
+    }
+  
+    // Faz alguma coisa
+}
+
+
+
+How to apply the patterns
+
+** Application architecture patterns
+Monolithic architecture
+Microservice architecture
+
+**Decomposition
+Decompose by business capability
+Decompose by subdomain
+Self-contained Servicenew
+Service per teamnew
+
+**Refactoring to microservicesnew
+Strangler Application
+Anti-corruption layer
+
+**Data management
+Database per Service
+Shared database
+Saga
+API Composition
+CQRS
+Domain event
+Event sourcing
+
+**Transactional messaging
+Transactional outbox
+Transaction log tailing
+Polling publisher
+
+
+**Testing
+Service Component Test
+Consumer-driven contract test
+Consumer-side contract test
+
+**Deployment patterns
+Multiple service instances per host
+Service instance per host
+Service instance per VM
+Service instance per Container
+Serverless deployment
+Service deployment platform
+
+**Cross cutting concerns
+Microservice chassis
+Service Template
+Externalized configuration
+
+
+**Communication style
+Remote Procedure Invocation
+Messaging
+Domain-specific protocol
+Idempotent Consumer
+
+**External API
+API gateway
+Backend for front-end
+
+**Service discovery
+Client-side discovery
+Server-side discovery
+Service registry
+Self registration
+3rd party registration
+
+**Reliability
+Circuit Breaker
+
+**Security
+Access Token
+
+**Observability
+Log aggregation
+Application metrics
+Audit logging
+Distributed tracing
+Exception tracking
+Health check API
+Log deployments and changes
+
+**UI patterns
+Server-side page fragment composition
+Client-side UI composition
+

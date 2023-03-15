@@ -1,0 +1,804 @@
+Angular 8 ao 12
+
+Lifecycle event sequence
+After your application instantiates a component or directive by calling its constructor, 
+Angular calls the hook methods you have implemented at the appropriate point in the lifecycle of that instance.
+
+Angular executes hook methods in the following sequence. 
+You can use them to perform the following kinds of operations.
+
+Hook method	Purpose	Timing
+ngOnChanges()	
+Respond when Angular sets or resets data-bound input properties. 
+The method receives a SimpleChanges object of current and previous property values.
+
+Note that this happens very frequently, so any operation you perform here impacts performance significantly. 
+See details in Using change detection hooks in this document.
+
+Called before ngOnInit() (if the component has bound inputs) and whenever one or more data-bound input properties change.
+
+Note that if your component has no inputs or you use it without providing any inputs, the framework will not call ngOnChanges().
+
+ngOnInit()	
+Initialize the directive or component after Angular first displays the data-bound properties and sets the directive or component's input properties. See details in Initializing a component or directive in this document.
+
+Called once, after the first ngOnChanges(). ngOnInit() is still called even when ngOnChanges() is not (which is the case when there are no template-bound inputs).
+
+ngDoCheck()
+Detect and act upon changes that Angular can't or won't detect on its own. See details and example in Defining custom change detection in this document.
+
+Called immediately after ngOnChanges() on every change detection run, and immediately after ngOnInit() on the first run.
+
+ngAfterContentInit()	
+Respond after Angular projects external content into the component's view, or into the view that a directive is in.
+
+See details and example in Responding to changes in content in this document.
+
+Called once after the first ngDoCheck().
+
+ngAfterContentChecked()	
+Respond after Angular checks the content projected into the directive or component.
+
+See details and example in Responding to projected content changes in this document.
+
+Called after ngAfterContentInit() and every subsequent ngDoCheck().
+
+ngAfterViewInit()	
+Respond after Angular initializes the component's views and child views, or the view that contains the directive.
+
+See details and example in Responding to view changes in this document.
+
+Called once after the first ngAfterContentChecked().
+
+ngAfterViewChecked()	
+Respond after Angular checks the component's views and child views, or the view that contains the directive.
+
+Called after the ngAfterViewInit() and every subsequent ngAfterContentChecked().
+
+ngOnDestroy()	
+Cleanup just before Angular destroys the directive or component. 
+Unsubscribe Observables and detach event handlers to avoid memory leaks. See details in Cleaning up on instance destruction in this document.
+
+============================================================================================================
+1) Pipes em Angular : Um pipe recebe dados como entrada e os transforma na saída desejada
+https://angular.io/guide/pipes
+
+2) pipe()função em RxJS : Você pode usar tubos para vincular operadores. 
+Pipes permitem combinar várias funções em uma única função.
+
+A pipe()função leva como argumentos as funções que você deseja combinar e retorna uma nova função que, quando executada, executa as funções compostas em sequência.
+https://angular.io/guide/rx-library (pesquise tubos neste URL, você pode encontrar o mesmo)
+
+Então, de acordo com sua pergunta, você está se referindo a pipe()função em RxJS
+
+============================================================================================================
+
+Algumas diretivas podem mudar completamente a estrutura da saída do template do componente. Essas diretivas podem alterar o layout do DOM adicionando e removendo elementos DOM de visualização. Podemos classificar essas diretivas em estruturais :
+
+NgIf
+NgFor
+NgSwitch, NgSwitchWhen, NgSwitchDefault
+Outras diretivas podem simplesmente alterar a aparência dos itens gerados pelo modelo. Vamos chamar essas diretivas não estruturais :
+
+NgClass
+NgStyle
+NgControlName
+NgModel
+A seguir vamos abordar as principais diretivas mostrando o seu funcionamento.ajustados.
+No navegador como verifico qual rota foi chamada e os dados do request ou response.
+
+Guards
+Não importa se a autenticação da sua aplicação Angular é feita com JWT, OAuth ou qualquer outra, 
+nós utilizamos Guards para restringir acesso a uma rota (uma página). Isto é: sempre que o usuário tentar acessar uma URL da sua aplicação, 
+ele irá executar o Guard referente a aquela rota e que deve dizer se o usuário pode ou não acessar a página.
+
+Um Guard é um Service normal, como qualquer outro no Angular, que utiliza a Interface CanActivate. 
+Essa interface obrigará a implementação do método canActivate, que deve retornar um valor booleano 
+(seja booleano puro, Observable ou Promisse).
+
+
+6. Explain Components, Modules and Services in Angular
+For better understanding, I would like you to create an Angular application by running the following inside the command terminal:
+
+ng new angularApp
+
+The above command will create an angular application in the directory.
+Next, let's move on to understand Components, Modules, and Services.
+
+Components
+In Angular, components are the basic building blocks, which control a part of the UI for any application.
+A component is defined using the @Component decorator. Every component consists of three parts, the template which loads the view for the component, a stylesheet which defines the look and feel for the component, and a class that contains the business logic for the component.
+For creating a component, inside the command terminal, navigate to the directory of the application created, and run the following command:
+
+ng generate component test
+
+Or
+
+ng g c test
+
+
+One can see the generated component inside src/app/test folder. The component will be defined inside test.component.ts and this is how it looks:
+    
+      import { Component, OnInit } from '@angular/core';
+
+      @Component({
+        selector: 'app-test',
+        templateUrl: './test.component.html',
+        styleUrls: ['./test.component.css']
+      })
+      export lass TestComponent implements OnInit {
+
+        constructor() {}
+
+        ngOnInit() {
+        }
+      }
+    
+  
+As we can see in the above image, our component is defined with @Component decorator.
+
+
+Anatomy Test Angular
+
+describe('ContactClass tests', () => {
+    let contact: ContactClass = null;
+    beforeEach(() => {
+        contact = new ContactClass();
+    });
+    it('should have a valid constructor', () => {
+        expect(contact).not.toBeNull();
+    });
+
+    it('should set name correctly through constructor', () => {
+        contact = new ContactClass('Liz');
+        expect(contact.name).toEqual('Liz');
+        Tests for setting name using a
+    });
+
+    constructor and testing the
+    getter for name
+    afterEach(() => {
+        contact = null;
+    });
+});
+
+Anatomy of a Jasmine Test Suite
+Testing is really easy - don’t overthink it.
+
+describe what your testing. This is your test suite.
+it should have some expected behaviors. These are your specs.
+expect or assert these behaviors to hold true. These are your expectations
+
+
+Modules
+A module is a place where we can group components, directives, services, and pipes. Module decides whether the components, directives, etc can be used by other modules, by exporting or hiding these elements. Every module is defined with a @NgModule decorator.
+By default, modules are of two types:
+
+Root Module
+Feature Module
+
+Constructor
+
+ngOnChanges( ) This hook/method is called before ngOnInit and whenever one or more input properties of the component changes.
+This method/hook receives a SimpleChanges object which contains the previous and current values of the property.
+
+ngOnInit( ) This hook gets called once, after the ngOnChanges hook.
+It initializes the component and sets the input properties of the component.
+
+ngDoCheck( ) It gets called after ngOnChanges and ngOnInit and is used to detect and act on changes that cannot be detected by Angular.
+We can implement our change detection algorithm in this hook. ngAfterContentInit( ) It gets called after the first ngDoCheck hook. This hook responds after the content gets projected inside the component.
+
+ngAfterContentChecked( ) It gets called after ngAfterContentInit and every subsequent ngDoCheck. It responds after the projected content is checked.
+
+ngAfterViewInit( ) It responds after a component's view, or a child component's view is initialized.
+
+ngAfterViewChecked( ) It gets called after ngAfterViewInit, and it responds after the component's view, or the child component's view is checked.
+
+ngOnDestroy( ) It gets called just before Angular destroys the component. This hook can be used to clean up the code and detach event handlers.
+
+Let’s understand how to use ngOnInit hook, since it’s the most oftenly used hook. If one has to process lot of data during component creation, it’s better to do it inside ngOnInit hook rather than the constructor:
+Every application can have only one root module whereas, it can have one or more feature modules.
+A root module imports BrowserModule, whereas a feature module imports CommonModule.
+
+In the application that we created before, one can see that the root module is defined inside app.module.ts and this is how it looks:
+    
+      import { BrowserModule } from '@angular/platform-browser';
+      import { NgModule } from '@angular/core';
+
+      import { AppComponent } from './app.component';
+      import { TestComponent } from './test/text.component';
+
+      @NgModule({
+        declarations: [
+          AppComponent,
+          TestComponent
+        ],
+        imports: [
+          BrowserModule
+        ],
+        providers: [],
+        bootstrap: [AppComponent]
+      })
+      export class AppModule { }
+    
+  
+We can see in the above image that the component we created earlier is already imported in the declarations array.
+
+To create a feature module, run the following command:
+
+ng g m test-module
+
+The module is created inside the src/app/test-module/test-module.module.ts file:
+
+    
+      import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
+
+      @NgModule({
+        declarations: [],
+        imports: [
+          CommonModule
+        ]
+      })
+      export class TestModuleModule { }
+    
+  
+As one can see, CommonModule is imported since this is a feature module.
+
+Services Services are objects which get instantiated only once during the lifetime of an application. The main objective of a service is to share data, functions with different components of an Angular application.
+A service is defined using a @Injectable decorator. A function defined inside a service can be invoked from any component or directive.
+
+To create a service, run the following command:
+
+ng g s test-service
+
+
+The service will be created inside src/app/test-service.service.ts:
+      import { Injectable } from '@angular/core';
+
+      @Injectable({
+        providedIn: 'root'
+      })
+      export class TestServiceService {
+
+        constructor() { }
+
+      }
+
+
+Injeção de dependências
+Injeção de dependências é um padrão de projeto que pode ser aplicado independentemente da linguagem.
+
+Esse padrão permite deixar as classes de componentes mais limpas e eficientes, delegando tarefas complexas e regras de negócios para os serviços.
+Indo mais a fundo, injeção de dependências é o processo de prover as instâncias necessárias que uma determinada classe precisa para ser instanciada e utilizada.
+A grande vantagem é que temos um menor acoplamento entre nossas classes.
+O Angular implementa um mecanismo de injeção de dependências e executa ele na inicialização da aplicação.
+  
+Any method/function defined inside the TestServiceService class can be directly used inside any component by just importing the service.
+
+
+8. Explain string interpolation and property binding in Angular.
+
+15. Explain MVVM architecture
+MVVM architecture consists of three parts:
+
+1. Model
+2. View
+3. ViewModel
+
+
+Model contains the structure of an entity. In simple terms it contains data of an object.
+View is the visual layer of the application. It displays the data contained inside the Model. In angular terms, this will be the HTML template of a component.
+
+ViewModel is an abstract layer of the application. A viewmodel handles the logic of the application. It manages the data of a model and displays it in the view.
+View and ViewModel are connected with data-binding (two-way data-binding in this case). Any change in the view, the viewmodel takes a note and changes the appropriate data inside the model.
+
+
+Não se confunda com os conceitos de Angular e RxJS
+Temos conceito de tubos em Angular e pipe()função em RxJS.
+
+==========================================================================================================================================
+Observable lifecycle:
+Followings are the 4 stages of the observable lifecycle:
+
+* Creation  
+var observable = Observable.create()
+
+Subscription
+  var observable = Observable.create((observer:any) => {
+                                observer.next('Hello World!')
+                        })
+
+            observable.subscribe(function logMessage(message:any) {
+              console.log(message);
+            })
+
+* Execution
+var observable = Observable.create((observer:any) => {
+                observer.next('I am number 1')
+                observer.next('I am number 2')
+                observer.error('I am number 3')
+                observer.complete('I am number 4')
+                observer.next('I am number 5')
+            })
+            observable.subscribe(function logMessage(message:any) {
+              console.log(message);
+            })
+
+* Destruction
+
+return function unsubscribe() {
+  clearInterval(observable);
+};        
+
+
+getUsers(): Promise<User[]>{
+  return fetch(myApiUrl)
+  .then(res=>res.json())
+  .catch(err=>{
+     throw new Error(err.message);  
+   });
+}
+
+
+@Injectable()
+class UserService {
+ ...
+ getUsers(): Observable<User[]> {
+    return this.http.get(myApiUrl)
+                    .map(res=>res.json())
+                    .catch(err=> Observable.throw(err.message));
+ } 
+ ...
+}
+
+
+Mas quais são as vantagens de usar Observable e não Promises?
+A grande vantagem está nos “poderes” que o Observable nos dá com seus operadores, por exemplo: Podemos “cancelar” 
+requests para poupar processamento, ou até mesmo tentar fazer uma nova requisição caso algum problema como perda de conexão aconteça.
+O usuário não precisa ver aquela tela de erro, afinal, ele não tem culpa.
+
+
+Operador Subscribe
+Um dos operadores mais importantes do Observable é o subscribe, que é o equivalente ao then de uma promise ou ao $watch.
+
+
+Operador Retry
+Vamos supor que você está tentando fazer o download de um arquivo, mas está em uma conexão com muita oscilação(o que convenhamos que é bem comum no Brasil), é de se esperar que o download falhe.
+
+
+Operador switchMap
+Este operador soluciona um dos problemas, que é termos de processar todas as respostas, mesmo mais antigas. 
+Por exemplo: Se você pesquisou por Paulo, serão 5 requisições, uma para cada letra, você irá construir os objetos e substituir em seu array 5 vezes, é algo custoso.
+O switchMap é um dos operadores que você irá usar e se orgulhar infinitamente. 
+Se você fez 5 requisições, ele irá processar apenas a última delas, que é a que realmente importa para nós, construiremos nosso objeto uma vez e substituiremos o array somente uma vez. Seu uso é simples, assim como todos os operadores que vimos até agora.
+
+Operador debounceTime
+Para chegar a apenas uma requisição é fácil, não precisamos buscar enquanto o usuário ainda não terminou de digitar, ou seja, se queremos buscar por “Paulo”, não há motivo para buscarmos somente a letra “P”, depois somente as letras “Pa”, e assim sucessivamente até completarmos a palavra.
+
+===================================================================================================================================
+O que é Lodash?
+Lodash é uma biblioteca Javascript que fornece um conjunto de funções para que a pessoa programadora possa trabalhar com mais facilidade em tarefas que envolvam a manipulação de matrizes, strings, objetos, números, etc.
+
+Ela é conhecida por ser a sucessora da biblioteca Underscore e pela simplicidade que ela traz para a criação de códigos. Afinal, tarefas que gastariam várias linhas de código para serem feitas podem ser realizadas em uma única linha, bastando apenas chamar a função Lodash equivalente.
+
+Trata-se também de uma biblioteca open source, que tem seu código disponível para contribuições no Github. No mais, a Lodash utiliza o paradigma de programação funcional, o que favorece a elaboração de métodos mais objetivos, garantindo uma boa modularidade e maior qualidade de código.
+
+Como funciona a Lodash?
+Agora que você já sabe o que é Lodash, deve estar se perguntando sobre o que essa biblioteca oferece na prática. Para responder essa dúvida, vamos mostrar um pouco mais de suas características e funções. Veja!
+
+Categorias
+As funções da Lodash são agrupadas em 13 categorias diferentes, sendo elas:
+
+Array;
+Collection;
+Date;
+Function;
+Lang;
+Math;
+Number;
+Object;
+Seq;
+String;
+Util;
+Properties;
+Methods.
+Em cada uma das categorias listadas você vai encontrar métodos para lidar com problemas específicos de codificação. A categoria Array, por exemplo, fornece funções para manipulação de matrizes. Já a categoria Math apresenta funções matemáticas, como métodos de soma, divisão e multiplicação. 
+
+===================================================================================================================================
+O que é o JSON Server
+Ter uma API pronta para começar o desenvolvimento do front-end da sua aplicação as vezes pode ser um problema. Com isso te apresento o JSON Server.
+
+JSON Server é uma biblioteca capaz de criar uma API Fake em 30 segundos e sem precisar escrever nenhuma linha de código.
+
+
+O link para a documentação completa está no final do artigo.
+
+Versão utilizada: 0.14.0
+
+Passo a passo para simular uma API
+Começando com JSON Server
+Rotas
+Filtros
+Paginação
+Ordenação
+
+1 – Começando com JSON Server
+Instalação
+
+npm install -g json-server
+ 
+
+Criando o arquivo de banco de dados
+
+Crie um arquivo de nome db.json em qualquer pasta do seu computador.
+
+json-server --watch db.json
+
+https://www.fabricadecodigo.com/json-server/
+===================================================================================================================================
+77 - What is JIT?
+Just-in-Time (JIT) is a type of compilation that compiles your app in the browser at runtime. 
+JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, 
+the below commands used for JIT compilation,
+
+ng build
+ng serve
+
+Just-in-Time (JIT), which compiles your app in the browser at runtime. (when you run ng serve)
+
+Compiled in the browser
+Each files compiled separately
+No need to build after changing your code and before reloading the browser page
+Suitable for local development
+
+78 - What is AOT?
+Ahead-of-Time (AOT) is a type of compilation that compiles your app at build time. 
+For AOT compilation, include the --aot option with the ng build or ng serve command as below,
+
+ng build --aot
+ng serve --aot
+
+Note: The ng build command with the --prod meta-flag (ng build --prod) compiles with AOT by default.
+
+**Advantages of AOT compilation:
+
+*Fast Rendering: The browser loads the executable code and renders it immediately as the application is compiled before running inside the browser. 
+*Fewer Ajax Requests: The compiler sends the external HTML and CSS files along with the application, eliminating AJAX requests for those source files. 
+*Minimizing Errors: Easy to detect and handle errors during the building phase. 
+*Better Security: Before an application runs inside the browser, the AOT compiler adds HTML and templates into the JS files, so there are no extra HTML files to be read, thus providing better security for the application.
+
+   
+149 - How do you test Angular application using CLI?
+Angular CLI downloads and install everything needed with the Jasmine Test framework. You just need to run ng test to see the test results. By default this command builds the app in watch mode, and launches the Karma test runner. The output of test results would be as below,
+
+10% building modules 1/1 modules 0 active
+...INFO [karma]: Karma v1.7.1 server started at http://0.0.0.0:9876/
+...INFO [launcher]: Launching browser Chrome ...
+...INFO [launcher]: Starting browser Chrome
+...INFO [Chrome ...]: Connected on socket ...
+Chrome ...: Executed 3 of 3 SUCCESS (0.135 secs / 0.205 secs)
+Note: A chrome browser also opens and displays the test output in the "Jasmine HTML Reporter". 
+
+Se eu querer executar somente 1 teste especifico o que poderia ser feito?
+fdescribe
+
+
+
+125 - What are the class decorators in Angular?
+A class decorator is a decorator that appears immediately before a class definition, which declares the class to be of the given type, and provides metadata suitable to the type
+
+The following list of decorators comes under class decorators,
+
+@Component()
+@Directive()
+@Pipe()
+@Injectable()
+@NgModule()
+
+
+Property decorators Used for properties inside classes, e.g.  @Input and @Output
+import { Component, Input } from '@angular/core';
+
+@Component({
+    selector: 'my-component',
+    template: '<div>Property decorator</div>'
+})
+
+export class MyComponent {
+    @Input()
+    title: string;
+}
+
+
+63 - What is Angular Router?
+Angular Router is a mechanism in which navigation happens from one view to the next as users perform application tasks. 
+It borrows the concepts or model of browser's application navigation.
+
+64 - What are the router imports?
+The Angular Router which represents a particular component view for a given URL is not part of Angular Core. It is available in library named @angular/router to import required router components. For example, we import them in app module as below,
+
+import { RouterModule, Routes } from '@angular/router';
+arrow_up Back to Top
+
+65 - What is router outlet?
+The RouterOutlet is a directive from the router library and it acts as a placeholder that marks the spot in the template where the router should display the components for that outlet. Router outlet is used like a component,
+
+<router-outlet></router-outlet>
+<!-- Routed components go here -->
+
+
+
+Q01. Como adicionar uma rota para componentes filhos com o mesmo módulo?
+
+What is router state?
+RouterState is a tree of activated routes. Every node in this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data. You can access the current RouterState from anywhere in the application using the Router service and the routerState property.
+
+@Component({templateUrl:'template.html'})
+class MyComponent {
+  constructor(router: Router) {
+    const state: RouterState = router.routerState;
+    const root: ActivatedRoute = state.root;
+    const child = root.firstChild;
+    const id: Observable<string> = child.params.map(p => p.id);
+    //...
+  }
+}
+arrow_up Back to Top
+
+What are router events?
+During each navigation, the Router emits navigation events through the Router.events property allowing you to track the lifecycle of the route.
+
+The sequence of router events is as below,
+
+NavigationStart,
+RouteConfigLoadStart,
+RouteConfigLoadEnd,
+RoutesRecognized,
+GuardsCheckStart,
+ChildActivationStart,
+ActivationStart,
+GuardsCheckEnd,
+ResolveStart,
+ResolveEnd,
+ActivationEnd
+ChildActivationEnd
+NavigationEnd,
+NavigationCancel,
+NavigationError
+Scroll
+
+
+238 - What is a shared module?
+The Shared Module is the module in which you put commonly used directives, pipes, and components into one module that is shared(import it) throughout the application.
+
+For example, the below shared module imports CommonModule, FormsModule for common directives and components, pipes and directives based on the need,
+
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user.component';
+import { NewUserDirective } from './new-user.directive';
+import { OrdersPipe } from './orders.pipe';
+
+@NgModule({
+ imports:      [ CommonModule ],
+ declarations: [ UserComponent, NewUserDirective, OrdersPipe ],
+ exports:      [ UserComponent, NewUserDirective, OrdersPipe,
+                 CommonModule, FormsModule ]
+})
+export class SharedModule { }
+
+
+239 - Can I share services using modules?
+No, it is not recommended to share services by importing module. i.e 
+Import modules when you want to use directives, pipes, and components only. 
+The best approach to get a hold of shared services is through 'Angular dependency injection' 
+because importing a module will result in a new service instance.
+
+
+What are reactive forms?
+Reactive forms is a model-driven approach for creating forms in a reactive style(form inputs changes over time). These are built around observable streams, where form inputs and values are provided as streams of input values. Let's follow the below steps to create reactive forms,
+
+Register the reactive forms module which declares reactive-form directives in your app
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [
+    // other imports ...
+    ReactiveFormsModule
+  ],
+})
+export class AppModule { }
+Create a new FormControl instance and save it in the component.
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'user-profile',
+  styleUrls: ['./user-profile.component.css']
+})
+export class UserProfileComponent {
+  userName = new FormControl('');
+}
+Register the FormControl in the template.
+<label>
+  User name:
+  <input type="text" [formControl]="userName">
+</label>
+Finally, the component with reactive form control appears as below, ```js import { Component } from '@angular/core'; 
+import { FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'user-profile',
+  styleUrls: ['./user-profile.component.css']
+  template: `
+     <label>
+       User name:
+       <input type="text" [formControl]="userName">
+     </label>
+  `
+})
+export class UserProfileComponent {
+  userName = new FormControl('');
+}
+```
+
+
+Validation Form
+constructor(fb: FormBuilder) {
+this.userForm = fb.group({
+username: fb.control('', [Validators.required, Validators.minLength(3)]),
+password: fb.control('', Validators.required)
+});
+}
+
+
+Erros Form
+    <h2>Sign up</h2>
+    <form (ngSubmit)="register()" [formGroup]="userForm">
+    <div>
+        <label>Username</label><input formControlName="username">
+        <div *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('required')">Username is required</div>
+        <div *ngIf="usernameCtrl.dirty && usernameCtrl.hasError('minlength')">Username should be 3 characters min</div>
+    </div>
+    <div>
+    <label>Password</label><input type="password" formControlName="password">
+    <div *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('required')">Password is required</div>
+    </div>
+        <button type="submit" [disabled]="userForm.invalid">Register</button>
+    </form>
+
+
+Custom validator
+const isOldEnough = (control: FormControl) => {
+    // control is a date input, so we can build the Date from the value
+    const birthDatePlus18 = new Date(control.value);
+    birthDatePlus18.setFullYear(birthDatePlus18.getFullYear() + 18);
+    return birthDatePlus18 < new Date() ? null : { tooYoung: true };
+};
+
+
+36 - What is HttpClient and its benefits?
+Most of the Front-end applications communicate with backend services over HTTP protocol using either XMLHttpRequest interface or the fetch() API. Angular provides a simplified client HTTP API known as HttpClient which is based on top of XMLHttpRequest interface. 
+This client is avaialble from @angular/common/http package. 
+You can import in your root module as below,
+
+import { HttpClientModule } from '@angular/common/http';
+The major advantages of HttpClient can be listed as below,
+
+Contains testability features
+Provides typed request and response objects
+Intercept request and response
+Supports Observalbe APIs
+Supports streamlined error handling
+
+============================================================================================================================
+MicrofrontEnds
+
+Different Approaches to Micro-Frontends
+There are many approaches that you could implement Micro-Frontends. But I found these 6 ways to implement. Here is an article that I have written about these.
+Iframes
+Through NGINX
+Web Components/Angular Elements
+Angular Libraries
+Monorepos
+Customized Orchestrator
+
+
+Advantages of Mirco-Frontends
+Here are the advantages of this architecture.
+*Apps are small
+Obviously, apps become small when we split the large application by sections, pages or features.
+
+*Apps are independent
+Since all the apps are divided and developed separately these are independent of each other
+
+*Apps are easier to understand
+Apps are easier to understand because they are small and developed by a single team.
+
+*Apps are easier to develop and deploy
+As these apps are small in nature and developed by a single team its very easy to develop and deploy. We can even deploy independently.
+
+*Apps are easier to test
+We have to write thousands and thousands of unit tests for larger applications and takes forever to run. This makes out deployment process slower. When it comes to micro frontends each app has few unit tests and executes its own unit tests and can be run independently.
+
+*Apps development becomes faster
+The whole development becomes faster and easier because of separate teams.
+
+*CI/CD Becomes easier
+Each app can be integrated and deployed separately and this makes the CI/CD process a lot easier. When we fix the app or introduce a new feature we don’t have to worry about the entire application since all the features are independent.
+
+*Independent Stacks and versions
+We can choose our own stack for each app but this doesn’t happen so often But, we can have different versions of the same stack. For example, Some teams have the flexibility and time to introduce and test newer versions of the same stack.
+
+*No Shared Code
+In large applications, we tend to share code across features but, this doesn’t scale well and introduce a lot of bugs and interdependency as the app grows bigger and bigger. This doesn’t apply with the Micro-frontends as we do not share the code unless it is a dumb component.
+Can change architecture easily without touching old one
+Sometimes we have to extend the old architecture but we might not have the developers to implement or extend the architecture. With the Micro frontends approach, we can develop the new feature with the latest stack and deliver independently.
+
+
+**Features of Mirco-Frontends
+*Each frontend represents a specific feature or subdomain of the entire application
+*Each frontend can be implemented with a separate team.
+*Each frontend can be implemented with different technology.
+*They cannot share logic and its independent of each other.
+*Each Frontend can be owned by a single team.
+
+
+**Micro-Frontend Frameworks
+Micro frontends have been implemented for at least two years and it is still a green field. Have you ever wonder are there any frameworks or libraries to implement these and makes our job easier. The answer is yes and there are a couple of libraries or frameworks
+*single-spa
+*frint.js
+
+============================================================================================================================
+Angular Performance
+
+The Angular performance tuning steps
+This is the steps you will go through as you performance tune your Angular application. You should only move up the steps until the performance problems are fixed, no reason to over-engineer improvements that will not improve the UX.
+
+OnPush
+Lazy loading modules
+Improve page load with Angular PWA
+trackBy for ngFor
+Pure pipes instead of methods (including async)
+Cache values from pipes and pure functions
+Cache HTTP requests better
+Detach/manual change detection
+
+form
+
+https://www.simform.com/blog/angular-performance/
+
+01 - vc acabou de fazer uma requisição para uma API, qual procedimento vc pode usar no navegador para validar qual request e response ou error acontenceu?
+02 - Qual sua preferencia e qual o ganho ao trabalhar com  CSS Frameworks?
+03 - vc ja trabalhou com sistema de grid, qual e sua preferencia e como funciona a divisão das grids?
+04 - State Manager ja trabalhou com Algum, poderia descrever o seu uso e o ganho se o mesmo, for adicionado no Angular.
+05 -  What is the difference between Subject and BehaviorSubject ?
+
+Módulos
+Outro elemento importante são os módulos. Eles ajudam a tornar nossa aplicação mais organizada.
+É possível criar módulos que agrupem componentes, serviços e outros elementos por alguma semelhança.
+
+Bibliotecas de componentes
+Apesar de Angular ser um framework relativamente novo, já temos várias bibliotecas de componentes excelentes e gratuitas a nossa disposição.
+
+A própria filosofia do framework, de ser baseada em componentes, cria um ambiente propício a isso.
+Atualmente, as principais bibliotecas de componentes para Angular são:
+PrimeNG;
+Angular Material;
+ng-bootstrap;
+E nós sabemos que nesse momento você está perguntando: Qual é a melhor sua biblioteca?
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
